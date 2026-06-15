@@ -51,8 +51,8 @@ const Slide0Cover = () => (
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="flex flex-wrap shadow-2xl border border-white/20 rounded-3xl overflow-hidden w-fit bg-white/5 backdrop-blur-md divide-x divide-white/10">
         {[
           { label: 'Volumen Base', value: '320 sol./día' },
-          { label: 'AHT Actual', value: '8 – 13 min' },
-          { label: 'Meta STP', value: '≥ 87.5%' },
+          { label: 'Tiempo Promedio (AHT)', value: '8 – 13 min' },
+          { label: 'Proc. Directo (STP)', value: '≥ 87.5%' },
           { label: 'Ahorro Proyectado', value: '~38 h/día' }
         ].map((kpi, i) => (
           <div key={i} className="px-8 py-5 flex flex-col gap-1.5 hover:bg-white/5 transition-colors">
@@ -119,7 +119,7 @@ const Slide1Problem = () => {
         <div className="flex flex-col gap-6 h-full">
           {/* Gráfica 1: Impacto en AHT */}
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="bg-white border border-slate-200 rounded-3xl p-8 flex flex-col justify-center h-1/2 shadow-lg shadow-slate-200/50">
-            <h4 className="text-sm font-black uppercase tracking-widest text-sura-cyan mb-8 text-center flex items-center justify-center gap-2"><Clock size={18}/> Impacto en AHT (Feliz vs Excepción)</h4>
+            <h4 className="text-sm font-black uppercase tracking-widest text-sura-cyan mb-8 text-center flex items-center justify-center gap-2"><Clock size={18}/> Tiempo Promedio de Gestión — AHT (Feliz vs Excepción)</h4>
             
             <div className="flex flex-col gap-6 px-4">
               <div className="relative">
@@ -260,22 +260,22 @@ const Slide3ToBe = () => (
         <div className="flex flex-wrap justify-center items-center gap-4 w-full max-w-7xl relative">
           
           {[
-            { step: 1, icon: <FileText size={32}/>, title: 'Forms / Apps', desc: 'Ingreso Estructurado', type: 'STP' },
+            { step: 1, icon: <FileText size={32}/>, title: 'Forms / Apps', desc: 'Ingreso Estructurado', type: 'Proc. Directo' },
             { step: 2, icon: <Settings size={32}/>, title: 'Power Automate', desc: 'Reglas y Ruteo', type: 'Auto' },
             { step: 3, icon: <Bot size={32}/>, title: 'RPA (UiPath)', desc: 'Validación Legacy', type: 'RPA' },
-            { step: 4, icon: <Zap size={32}/>, title: 'Actualización', desc: 'Automática < 2 min', type: 'STP' },
-            { step: '!', icon: <Users size={32}/>, title: 'Excepciones', desc: 'HITL Casos Críticos', type: 'HITL' },
+            { step: 4, icon: <Zap size={32}/>, title: 'Actualización', desc: 'Automática < 2 min', type: 'Proc. Directo' },
+            { step: '!', icon: <Users size={32}/>, title: 'Excepciones', desc: 'Intervención Humana', type: 'Humano' },
             { step: 5, icon: <Activity size={32}/>, title: 'Power BI', desc: 'Dashboard Trazabilidad', type: 'BI' }
           ].map((item, i, arr) => (
              <React.Fragment key={i}>
                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.1 }} className="relative bg-slate-50 border border-slate-200 p-5 rounded-3xl flex flex-col items-center text-center shadow-md w-44 z-10 hover:-translate-y-1 transition-transform">
                 <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-sura-blue text-white font-black flex items-center justify-center text-xs shadow-md">{item.step}</div>
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-inner ${item.type === 'HITL' ? 'bg-sura-cyan/20 text-sura-cyan' : 'bg-sura-green/20 text-sura-green'}`}>
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-3 shadow-inner ${item.type === 'Humano' ? 'bg-sura-cyan/20 text-sura-cyan' : 'bg-sura-green/20 text-sura-green'}`}>
                   {item.icon}
                 </div>
                 <h4 className="font-extrabold text-sm text-sura-blue mb-1">{item.title}</h4>
                 <p className="text-[11px] text-sura-dark/60 font-medium mb-3">{item.desc}</p>
-                <span className={`mt-auto text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md ${item.type === 'HITL' ? 'bg-sura-cyan/20 text-sura-cyan' : 'bg-sura-green/20 text-sura-green'}`}>{item.type}</span>
+                <span className={`mt-auto text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md ${item.type === 'Humano' ? 'bg-sura-cyan/20 text-sura-cyan' : 'bg-sura-green/20 text-sura-green'}`}>{item.type}</span>
               </motion.div>
               {i < arr.length - 1 && (
                 <div className="hidden lg:flex shrink-0">
@@ -288,7 +288,7 @@ const Slide3ToBe = () => (
         
         {/* Adicionales Abajo */}
         <div className="mt-10 flex flex-wrap justify-center gap-6">
-          {['~87.5% Procesamiento STP', '0 Solicitudes incompletas', 'Trazabilidad 100%', 'Analista enfocado en valor'].map((gain, i) => (
+          {['~87.5% Procesamiento Directo', '0 Solicitudes incompletas', 'Trazabilidad 100%', 'Analista enfocado en valor'].map((gain, i) => (
             <div key={i} className="px-6 py-3 bg-green-50 border border-sura-green/30 rounded-full text-sura-green font-extrabold text-sm flex items-center gap-3 shadow-sm">
               <CheckCircle2 size={18} strokeWidth={3} /> {gain}
             </div>
@@ -315,8 +315,8 @@ const Slide4Gov = () => (
          <h3 className="text-xl font-black flex items-center gap-3 text-sura-blue ml-2"><Activity className="text-sura-green" size={24} strokeWidth={3}/> Tablero de Resultados</h3>
          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { icon: <Target size={24}/>, name: 'Procesamiento Directo (STP)', from: '0%', to: '≥ 87.5%', color: 'text-sura-blue', bg: 'bg-blue-50', border: 'border-blue-200' },
-              { icon: <Clock size={24}/>, name: 'Tiempo Promedio (AHT)', from: '13 min', to: '≤ 2 min', color: 'text-sura-cyan', bg: 'bg-cyan-50', border: 'border-cyan-200' },
+              { icon: <Target size={24}/>, name: 'Procesamiento Directo — STP', from: '0%', to: '≥ 87.5%', color: 'text-sura-blue', bg: 'bg-blue-50', border: 'border-blue-200' },
+              { icon: <Clock size={24}/>, name: 'Tiempo Promedio — AHT', from: '13 min', to: '≤ 2 min', color: 'text-sura-cyan', bg: 'bg-cyan-50', border: 'border-cyan-200' },
               { icon: <RefreshCw size={24}/>, name: 'Tasa de Reproceso', from: '9.4%', to: '0%', color: 'text-sura-green', bg: 'bg-green-50', border: 'border-green-200' },
               { icon: <AlertCircle size={24}/>, name: 'Tasa de Errores', from: 'Frecuentes', to: '≤ 0.5%', color: 'text-sura-yellow', bg: 'bg-yellow-50', border: 'border-yellow-200', textDark: true },
               { icon: <TrendingDown size={24}/>, name: 'Ahorro Operativo', from: '45h/día', to: '7h/día', color: 'text-sura-blue-vivo', bg: 'bg-blue-50', border: 'border-blue-200' },
@@ -350,7 +350,7 @@ const Slide4Gov = () => (
               { c: 'RN-01 CERO CORREO', t: 'Toda solicitud ingresa por formulario.' },
               { c: 'RN-02 TIPIFICACIÓN', t: 'Obligatoria y forzada desde el origen.' },
               { c: 'RN-03 VALIDACIÓN VIVO', t: 'Email regex, celular 10 dígitos.' },
-              { c: 'RN-04 EXCEPCIÓN NOMBRES', t: 'Corrección de nombre requiere HITL.', critical: true },
+              { c: 'RN-04 EXCEPCIÓN NOMBRES', t: 'Corrección de nombre requiere intervención humana (HITL).', critical: true },
             ].map((r, i) => (
               <div key={i} className={`p-4 rounded-2xl border transition-all hover:-translate-y-0.5 ${r.critical ? 'bg-red-50 border-red-200' : 'bg-slate-50 border-slate-200'}`}>
                 <span className={`font-black text-sm block mb-1 uppercase tracking-wider ${r.critical ? 'text-red-700' : 'text-sura-blue-vivo'}`}>{r.c}</span>
@@ -427,7 +427,7 @@ const Slide5Tech = () => (
         <div className="grid grid-cols-2 gap-4 flex-1">
            <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-md flex flex-col justify-center relative overflow-hidden group hover:shadow-lg transition-all">
              <div className="absolute top-0 left-0 w-full h-1.5 bg-sura-green"></div>
-             <h4 className="text-xs font-black text-sura-green mb-3 flex items-center gap-2"><Zap size={14}/> STP · AUTOMÁTICO</h4>
+             <h4 className="text-xs font-black text-sura-green mb-3 flex items-center gap-2"><Zap size={14}/> PROCESAMIENTO DIRECTO (STP)</h4>
              <ul className="text-xs font-medium text-sura-dark/80 space-y-2 leading-tight">
                <li className="flex items-start gap-1.5"><Check size={14} className="text-sura-green shrink-0 mt-0.5"/> Val. de formato en origen</li>
                <li className="flex items-start gap-1.5"><Check size={14} className="text-sura-green shrink-0 mt-0.5"/> Búsqueda de cliente</li>
@@ -437,7 +437,7 @@ const Slide5Tech = () => (
            </div>
            <div className="bg-white border border-slate-200 rounded-3xl p-5 shadow-md flex flex-col justify-center relative overflow-hidden group hover:shadow-lg transition-all">
              <div className="absolute top-0 left-0 w-full h-1.5 bg-sura-cyan"></div>
-             <h4 className="text-xs font-black text-sura-cyan mb-3 flex items-center gap-2"><Users size={14}/> HITL · HUMANO</h4>
+             <h4 className="text-xs font-black text-sura-cyan mb-3 flex items-center gap-2"><Users size={14}/> INTERVENCIÓN HUMANA (HITL)</h4>
              <ul className="text-xs font-medium text-sura-dark/80 space-y-2 leading-tight">
                <li className="flex items-start gap-1.5"><Users size={14} className="text-sura-cyan shrink-0 mt-0.5"/> Corrección de nombre</li>
                <li className="flex items-start gap-1.5"><Users size={14} className="text-sura-cyan shrink-0 mt-0.5"/> Cliente no encontrado</li>
@@ -494,7 +494,7 @@ const Slide5Tech = () => (
             <ul className="text-white/80 text-xs leading-relaxed list-disc pl-4 space-y-1">
                <li>Arquitectura Power Platform + UiPath.</li>
                <li>Detección de inconsistencia (320 vs 350).</li>
-               <li>Priorización HITL para nombres.</li>
+               <li>Priorización de intervención humana para nombres.</li>
                <li>Criterio de NO automatizar sin rediseñar.</li>
             </ul>
             <p className="text-sura-cyan/80 text-[10px] font-bold uppercase tracking-widest mt-4 leading-tight">
