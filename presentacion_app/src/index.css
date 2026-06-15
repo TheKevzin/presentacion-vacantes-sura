@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap');
+
+@theme {
+  --color-sura-blue: #0033A0;
+  --color-sura-cyan: #00B4E6;
+  --color-sura-yellow: #D1F500;
+  --color-sura-blue-vivo: #2D6DF6;
+  --color-sura-aqua: #00AEC7;
+  --color-sura-dark: #002266;
+  --color-sura-green: #18C964;
+  --color-sura-red: #FF5A5A;
+  --color-sura-gray: #888B8D;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-sura-blue-vivo);
+    color: white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom scrollbar for slides */
+.slide-content::-webkit-scrollbar {
+  width: 4px;
+}
+.slide-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slide-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
