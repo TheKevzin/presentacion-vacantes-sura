@@ -556,10 +556,10 @@ const Slide5Tech = () => (
       <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-8 shadow-xl flex flex-col relative overflow-hidden">
         <div className="z-10 relative flex-1 flex flex-col justify-between">
           <div>
-            <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-inner backdrop-blur-sm border border-white/10">
+            <h3 className="text-[22px] font-black text-white mb-6 leading-tight flex items-center gap-3">
               <Bot className="text-sura-yellow" size={28}/>
-            </div>
-            <h3 className="text-[22px] font-black text-white mb-4 leading-tight">Declaración de Uso de IA</h3>
+              Declaración de Uso de IA
+            </h3>
             <p className="text-white/90 text-[14px] leading-relaxed font-medium mb-8">
               Uso de modelos generativos avanzados (Gemini / Claude) como <strong className="text-white bg-white/20 px-2 py-0.5 rounded">"Sparring Partner"</strong> estratégico para retar la lógica matemática, optimizar redacción y estructurar los hallazgos del rediseño.
             </p>
