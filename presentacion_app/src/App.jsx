@@ -330,14 +330,13 @@ const Slide4Gov = () => (
                     <ArrowRight size={16} className="text-slate-300" />
                     <span className={`font-black text-3xl tracking-tight ${k.textDark ? 'text-sura-dark' : k.color}`}>{k.to}</span>
                   </div>
-                </div>
                 <div className={`absolute -bottom-6 -right-6 opacity-[0.05] transition-transform duration-500 group-hover:scale-125 pointer-events-none ${k.textDark ? 'text-sura-dark' : k.color}`}>
                   {k.icon}
                 </div>
               </motion.div>
-            ))}
+             ))}
          </div>
-      </div>
+      </motion.div>
 
       {/* Bottom Row: Reglas & Riesgos */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full flex-1">
@@ -388,7 +387,6 @@ const Slide4Gov = () => (
           </div>
         </div>
       </motion.div>
-
     </div>
   </div>
 );
@@ -455,7 +453,7 @@ const Slide5Tech = () => (
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* CENTER COLUMN: Volumen + STP/HITL (span 6/12) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="col-span-6 flex flex-col gap-5 min-h-0">
@@ -549,8 +547,7 @@ const Slide5Tech = () => (
              </div>
            </div>
         </div>
-
-      </div>
+      </motion.div>
 
       {/* RIGHT COLUMN: IA (span 3/12) */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden">
