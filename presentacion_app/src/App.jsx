@@ -394,7 +394,7 @@ const Slide4Gov = () => (
 );
 
 const Slide5Tech = () => (
-  <div className="flex-1 flex flex-col px-12 lg:px-20 pb-40 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
+  <div className="flex-1 flex flex-col px-12 lg:px-20 pb-32 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
     <div className="mb-8 shrink-0">
       <span className="text-sura-blue-vivo text-xs font-black tracking-widest uppercase flex items-center gap-3 mb-2"><div className="w-8 h-[2px] bg-sura-blue-vivo"></div> Stack y Criterio de Datos</span>
       <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack, Análisis de Volumen y Uso de IA</h2>
@@ -410,47 +410,47 @@ const Slide5Tech = () => (
         <div className="flex flex-col flex-1 justify-between min-h-0">
           {/* Item 1 */}
           <div className="flex flex-col">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">INTERFAZ</span>
+            <span className="text-[11px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">INTERFAZ</span>
             <div className="flex items-center gap-4 bg-slate-50/80 p-3 xl:p-4 rounded-[1.25rem] border border-slate-100 shadow-sm">
               <Layers className="text-purple-600 shrink-0" size={32} />
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[14px] leading-tight mb-1">Power Apps / Forms</h4>
-                <p className="text-[11px] text-slate-500 font-medium leading-relaxed">Captura estructurada y validación en origen mediante reglas en tiempo real.</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1">Power Apps / Forms</h4>
+                <p className="text-[12px] text-slate-500 font-medium leading-relaxed">Captura estructurada y validación en origen mediante reglas en tiempo real.</p>
               </div>
             </div>
           </div>
           {/* Item 2 */}
           <div className="flex flex-col">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">MOTOR</span>
+            <span className="text-[11px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">MOTOR</span>
             <div className="flex items-center gap-4 bg-slate-50/80 p-3 xl:p-4 rounded-[1.25rem] border border-slate-100 shadow-sm">
               <Workflow className="text-blue-500 shrink-0" size={32} />
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[14px] leading-tight mb-1">Power Automate</h4>
-                <p className="text-[11px] text-slate-500 font-medium leading-relaxed">Orquestador core: enrutamiento lógico, control de estado y ETL de datos.</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1">Power Automate</h4>
+                <p className="text-[12px] text-slate-500 font-medium leading-relaxed">Orquestador core: enrutamiento lógico, control de estado y ETL de datos.</p>
               </div>
             </div>
           </div>
           {/* Item 3 */}
           <div className="flex flex-col">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">RPA</span>
+            <span className="text-[11px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">RPA</span>
             <div className="flex items-center gap-4 bg-slate-50/80 p-3 xl:p-4 rounded-[1.25rem] border border-slate-100 shadow-sm">
               <div className="w-[32px] h-[32px] rounded-lg bg-white border-2 border-[#FA4616] flex items-center justify-center shrink-0">
-                 <span className="text-[#FA4616] font-black text-[14px] leading-none">Ui</span>
+                 <span className="text-[#FA4616] font-black text-[15px] leading-none">Ui</span>
               </div>
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[14px] leading-tight mb-1">UiPath (RPA)</h4>
-                <p className="text-[11px] text-slate-500 font-medium leading-relaxed">Interacción automatizada con sistemas core (legacy) sin fricciones.</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1">UiPath (RPA)</h4>
+                <p className="text-[12px] text-slate-500 font-medium leading-relaxed">Interacción automatizada con sistemas core (legacy) sin fricciones.</p>
               </div>
             </div>
           </div>
           {/* Item 4 */}
           <div className="flex flex-col">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">DATOS</span>
+            <span className="text-[11px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md w-fit mb-1.5">DATOS</span>
             <div className="flex items-center gap-4 bg-slate-50/80 p-3 xl:p-4 rounded-[1.25rem] border border-slate-100 shadow-sm">
               <BarChart2 className="text-yellow-500 shrink-0" size={32} />
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[14px] leading-tight mb-1">Power BI / Dataverse</h4>
-                <p className="text-[11px] text-slate-500 font-medium leading-relaxed">Dashboards de volumetría, cuellos de botella y adopción del modelo.</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1">Power BI / Dataverse</h4>
+                <p className="text-[12px] text-slate-500 font-medium leading-relaxed">Dashboards de volumetría, cuellos de botella y adopción del modelo.</p>
               </div>
             </div>
           </div>
@@ -468,12 +468,12 @@ const Slide5Tech = () => (
              {/* A Block */}
              <div className="flex-1 p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
                <h4 className="text-[10px] font-black tracking-widest uppercase text-slate-500 mb-2">A — 5 Min en Promedio</h4>
-               <p className="text-lg font-black text-sura-blue tracking-tight">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
+               <p className="text-xl font-black text-sura-blue tracking-tight">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
              </div>
              {/* B Block */}
              <div className="flex-1 p-4 rounded-2xl bg-sura-blue/5 border border-sura-blue/10 flex flex-col justify-center relative">
                <h4 className="text-[10px] font-black tracking-widest uppercase text-sura-blue mb-2">B — 5 Min Adicionales <span className="text-[9px] font-semibold text-sura-blue/70">(Base)</span></h4>
-               <p className="text-lg font-black text-sura-blue tracking-tight">290 × 8 + 30×13 = <span className="text-sura-blue">2,710m</span> = 45.2h</p>
+               <p className="text-xl font-black text-sura-blue tracking-tight">290 × 8 + 30×13 = <span className="text-sura-blue">2,710m</span> = 45.2h</p>
                <span className="text-[9px] font-bold text-sura-blue/80 mt-1 absolute bottom-2 right-4">+5.8% mediante IA (vs. Cálculo A)</span>
              </div>
           </div>
@@ -512,9 +512,9 @@ const Slide5Tech = () => (
                  <div key={tag.name} className="bg-slate-50 p-3 rounded-[1rem] border border-slate-100 flex flex-col justify-center hover:border-sura-cyan/50 hover:bg-sura-cyan/5 transition-colors">
                    <div className="flex items-center gap-1.5 mb-1.5">
                      <tag.icon size={14} className="text-sura-cyan shrink-0"/>
-                     <span className="text-[11px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
+                     <span className="text-[12px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
                    </div>
-                   <p className="text-[9px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
+                   <p className="text-[10px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
                  </div>
                ))}
              </div>
@@ -540,9 +540,9 @@ const Slide5Tech = () => (
                  <div key={tag.name} className="bg-slate-50 p-3 rounded-[1rem] border border-slate-100 flex flex-col justify-center hover:border-sura-blue-vivo/50 hover:bg-sura-blue-vivo/5 transition-colors">
                    <div className="flex items-center gap-1.5 mb-1.5">
                      <tag.icon size={14} className="text-sura-blue-vivo shrink-0"/>
-                     <span className="text-[11px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
+                     <span className="text-[12px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
                    </div>
-                   <p className="text-[9px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
+                   <p className="text-[10px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
                  </div>
                ))}
              </div>
@@ -570,7 +570,7 @@ const Slide5Tech = () => (
           
           <div className="bg-[#09152C]/60 rounded-[1.5rem] p-5 border border-white/10 mb-4 shadow-lg flex-1 overflow-y-auto">
             <h4 className="text-white font-black text-[14px] mb-4 flex items-center gap-2"><CheckCircle size={16} className="text-sura-yellow"/> Decisiones propias e Intelectuales</h4>
-            <ul className="text-white/80 text-[12px] leading-relaxed space-y-4">
+            <ul className="text-white/80 text-[13px] leading-relaxed space-y-4">
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Arquitectura escalable en <strong>Power Platform + UiPath</strong> desde cero.</span></li>
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Detección de la causa raíz en la <strong>inconsistencia operativa</strong> de datos.</span></li>
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Creación de lógicas de negocio para derivación a <strong>HITL</strong>.</span></li>
