@@ -509,9 +509,9 @@ const Slide5Tech = () => (
                  <div key={tag.name} className="bg-slate-50 p-3 rounded-[1rem] border border-slate-100 flex flex-col justify-center hover:border-sura-cyan/50 hover:bg-sura-cyan/5 transition-colors">
                    <div className="flex items-center gap-1.5 mb-1.5">
                      <tag.icon size={14} className="text-sura-cyan shrink-0"/>
-                     <span className="text-[12px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
+                     <span className="text-[13px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
                    </div>
-                   <p className="text-[10px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
+                   <p className="text-[11px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
                  </div>
                ))}
              </div>
@@ -537,9 +537,9 @@ const Slide5Tech = () => (
                  <div key={tag.name} className="bg-slate-50 p-3 rounded-[1rem] border border-slate-100 flex flex-col justify-center hover:border-sura-blue-vivo/50 hover:bg-sura-blue-vivo/5 transition-colors">
                    <div className="flex items-center gap-1.5 mb-1.5">
                      <tag.icon size={14} className="text-sura-blue-vivo shrink-0"/>
-                     <span className="text-[12px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
+                     <span className="text-[13px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
                    </div>
-                   <p className="text-[10px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
+                   <p className="text-[11px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
                  </div>
                ))}
              </div>
@@ -565,13 +565,15 @@ const Slide5Tech = () => (
             </p>
           </div>
           
-          <div className="bg-[#09152C]/60 rounded-[1.5rem] p-5 border border-white/10 mb-4 shadow-lg flex-1 overflow-y-auto">
+          <div className="bg-[#09152C]/60 rounded-[1.5rem] p-5 border border-white/10 mb-4 shadow-lg flex-1 overflow-y-auto custom-scrollbar">
             <h4 className="text-white font-black text-[14px] mb-4 flex items-center gap-2"><CheckCircle size={16} className="text-sura-yellow"/> Decisiones propias e Intelectuales</h4>
-            <ul className="text-white/80 text-[13px] leading-relaxed space-y-4">
+            <ul className="text-white/80 text-[13px] leading-relaxed space-y-3">
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Arquitectura escalable en <strong>Power Platform + UiPath</strong> desde cero.</span></li>
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Detección de la causa raíz en la <strong>inconsistencia operativa</strong> de datos.</span></li>
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Creación de lógicas de negocio para derivación a <strong>HITL</strong>.</span></li>
                <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Criterio de oro: <strong>NO automatizar</strong> procesos sin rediseñar el AS-IS.</span></li>
+               <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Diseño de <strong>métricas operativas (KPIs)</strong> y modelado de impacto.</span></li>
+               <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Estructuración de <strong>UX/UI</strong> y arquitectura de la información.</span></li>
             </ul>
           </div>
           
