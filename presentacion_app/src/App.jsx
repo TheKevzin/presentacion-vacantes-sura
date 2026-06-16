@@ -394,14 +394,14 @@ const Slide4Gov = () => (
 );
 
 const Slide5Tech = () => (
-  <div className="flex-1 flex flex-col px-12 lg:px-20 pb-16 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
+  <div className="flex-1 flex flex-col px-12 lg:px-20 pb-24 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
     <div className="mb-6 shrink-0">
       <span className="text-sura-blue-vivo text-xs font-black tracking-widest uppercase flex items-center gap-3 mb-2"><div className="w-8 h-[2px] bg-sura-blue-vivo"></div> Stack y Criterio de Datos</span>
       <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack, Análisis de Volumen y Uso de IA</h2>
       <p className="text-sura-dark/70 text-base mt-2 max-w-4xl font-medium">Arquitectura Microsoft Power Platform + UiPath, análisis de volumen y declaración de uso de IA.</p>
     </div>
 
-    <div className="grid grid-cols-4 gap-5 flex-1 min-h-0">
+    <div className="grid grid-cols-4 grid-rows-[auto_1fr] gap-5 flex-1 min-h-0">
       
       {/* COLUMN 1: Stack (row-span-2) */}
       <div className="col-span-1 row-span-2 bg-white border border-slate-200 rounded-[2rem] p-5 shadow-lg flex flex-col relative overflow-hidden">
@@ -425,10 +425,10 @@ const Slide5Tech = () => (
       </div>
 
       {/* COLUMN 2 & 3: Volumen (row-span-1, col-span-2) */}
-      <div className="col-span-2 row-span-1 bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative justify-center">
-        <h3 className="text-base font-black text-sura-blue mb-4">Análisis de Volumen · Criterio Propio</h3>
-        <div className="flex gap-4 mb-4">
-           <div className="flex-1 p-3.5 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-center">
+      <div className="col-span-2 row-span-1 bg-white border border-slate-200 rounded-[2rem] p-5 shadow-lg flex flex-col relative justify-center">
+        <h3 className="text-base font-black text-sura-blue mb-3">Análisis de Volumen · Criterio Propio</h3>
+        <div className="flex gap-3 mb-3">
+           <div className="flex-1 p-3 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-center">
              <h4 className="text-[10px] font-black tracking-widest uppercase text-slate-500 mb-1">A — 5 Min en Promedio</h4>
              <p className="text-base font-mono font-bold text-sura-dark">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
            </div>
@@ -456,27 +456,27 @@ const Slide5Tech = () => (
         <div className="absolute top-0 right-0 w-48 h-48 bg-sura-cyan/20 blur-2xl rounded-full translate-x-1/4 -translate-y-1/4"></div>
         <div className="absolute bottom-0 left-0 w-32 h-32 bg-sura-yellow/10 blur-2xl rounded-full -translate-x-1/4 translate-y-1/4"></div>
         
-        <div className="z-10 relative">
+        <div className="z-10 relative flex-1 flex flex-col">
           <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 shadow-inner backdrop-blur-sm">
             <Bot className="text-sura-yellow" size={24}/>
           </div>
-          <h3 className="text-sm font-black text-white mb-3">Declaración IA</h3>
-          <p className="text-white/80 text-[11px] leading-relaxed font-medium mb-4">
+          <h3 className="text-base font-black text-white mb-3">Declaración IA</h3>
+          <p className="text-white/80 text-xs leading-relaxed font-medium mb-5">
             Uso de IA (Gemini/Claude) como <strong className="text-white bg-white/10 px-1.5 py-0.5 rounded">"Sparring Partner"</strong> para estructurar y retar volumetría.
           </p>
           
-          <div className="bg-black/20 rounded-xl p-4 border border-white/5">
-            <h4 className="text-sura-yellow font-black text-[10px] uppercase tracking-widest mb-2 flex items-center gap-1.5"><Check size={12}/> Decisiones propias</h4>
-            <ul className="text-white/90 text-[10px] leading-relaxed space-y-2">
-               <li className="flex items-start gap-1.5"><span className="text-sura-cyan font-bold mt-0.5">•</span> Arquitectura Power Platform + UiPath.</li>
-               <li className="flex items-start gap-1.5"><span className="text-sura-cyan font-bold mt-0.5">•</span> Detección inconsistencia operativa.</li>
-               <li className="flex items-start gap-1.5"><span className="text-sura-cyan font-bold mt-0.5">•</span> Priorización HITL para nombres.</li>
-               <li className="flex items-start gap-1.5"><span className="text-sura-cyan font-bold mt-0.5">•</span> Criterio: NO automatizar sin rediseñar.</li>
+          <div className="bg-black/20 rounded-xl p-5 border border-white/5 mt-auto mb-2">
+            <h4 className="text-sura-yellow font-black text-xs uppercase tracking-widest mb-3 flex items-center gap-1.5"><Check size={14}/> Decisiones propias</h4>
+            <ul className="text-white/90 text-xs leading-relaxed space-y-2.5">
+               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Arquitectura Power Platform + UiPath.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Detección inconsistencia.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Priorización HITL para nombres.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Criterio: NO automatizar sin rediseñar.</li>
             </ul>
           </div>
         </div>
         
-        <p className="text-sura-cyan/80 text-[9px] font-black uppercase tracking-widest leading-tight text-center mt-4 z-10">
+        <p className="text-sura-cyan/80 text-[10px] font-black uppercase tracking-widest leading-tight text-center mt-4 z-10">
           La IA fue acelerador. Decisiones de criterio propio.
         </p>
       </div>
@@ -490,9 +490,11 @@ const Slide5Tech = () => (
           </div>
           <h4 className="text-xs font-black text-sura-green mb-2 leading-tight">PROCESAMIENTO DIRECTO (STP)</h4>
         </div>
-        <div className="flex flex-wrap gap-1.5 z-10 mt-auto">
-          {['Val. Formato', 'Búsqueda BD', 'Actualización', 'Status'].map(tag => (
-            <span key={tag} className="text-[9px] font-bold bg-white text-sura-green px-2 py-1 rounded-md border border-sura-green/20 shadow-sm">{tag}</span>
+        <div className="grid grid-cols-2 gap-2 z-10 mt-auto">
+          {['Val. Formato', 'Búsqueda BD', 'Actualizar', 'Notificar'].map(tag => (
+            <div key={tag} className="bg-white/80 p-2 rounded-xl shadow-sm border border-sura-green/20 flex items-center justify-center text-center min-h-[40px]">
+              <span className="text-[10px] font-bold text-sura-green leading-tight">{tag}</span>
+            </div>
           ))}
         </div>
       </div>
@@ -506,9 +508,11 @@ const Slide5Tech = () => (
           </div>
           <h4 className="text-xs font-black text-white mb-2 leading-tight">INTERVENCIÓN HUMANA (HITL)</h4>
         </div>
-        <div className="flex flex-wrap gap-1.5 z-10 mt-auto">
+        <div className="grid grid-cols-2 gap-2 z-10 mt-auto">
           {['Nombres', 'No Encontrado', 'Inconsistencias', 'Conexión BD'].map(tag => (
-            <span key={tag} className="text-[9px] font-bold bg-sura-cyan/10 text-sura-cyan px-2 py-1 rounded-md border border-sura-cyan/20 backdrop-blur-sm">{tag}</span>
+            <div key={tag} className="bg-slate-800/80 p-2 rounded-xl shadow-sm border border-sura-cyan/20 flex items-center justify-center text-center min-h-[40px]">
+              <span className="text-[10px] font-bold text-sura-cyan leading-tight">{tag}</span>
+            </div>
           ))}
         </div>
       </div>
