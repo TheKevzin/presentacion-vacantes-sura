@@ -407,7 +407,7 @@ const Slide5Tech = () => (
       <div className="col-span-3 bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative overflow-hidden">
         <h3 className="text-base font-black text-sura-blue mb-6 flex items-center gap-2"><Layers size={20} className="text-sura-blue-vivo" /> Stack Propuesto</h3>
         
-        <div className="flex flex-col gap-5 flex-1 justify-center">
+        <div className="flex flex-col gap-5 flex-1 justify-between">
           {/* Item 1 */}
           <div className="flex flex-col">
             <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">INTERFAZ</span>
