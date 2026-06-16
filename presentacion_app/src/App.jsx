@@ -394,7 +394,7 @@ const Slide4Gov = () => (
 );
 
 const Slide5Tech = () => (
-  <div className="flex-1 flex flex-col px-12 lg:px-20 pb-24 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
+  <div className="flex-1 flex flex-col px-12 lg:px-20 pb-40 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
     <div className="mb-8 shrink-0">
       <span className="text-sura-blue-vivo text-xs font-black tracking-widest uppercase flex items-center gap-3 mb-2"><div className="w-8 h-[2px] bg-sura-blue-vivo"></div> Stack y Criterio de Datos</span>
       <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack, Análisis de Volumen y Uso de IA</h2>
@@ -468,26 +468,29 @@ const Slide5Tech = () => (
              {/* A Block */}
              <div className="flex-1 p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
                <h4 className="text-[10px] font-black tracking-widest uppercase text-slate-500 mb-2">A — 5 Min en Promedio</h4>
-               <p className="text-lg font-mono font-bold text-sura-dark">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
+               <p className="text-lg font-black text-sura-blue tracking-tight">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
              </div>
              {/* B Block */}
-             <div className="flex-[1.2] p-4 rounded-2xl bg-[#f0f9ff] border border-[#bae6fd] flex flex-col justify-center relative">
-               <h4 className="text-[10px] font-black tracking-widest uppercase text-sura-blue-vivo mb-2">B — 5 Min Adicionales (Base)</h4>
-               <p className="text-lg font-mono font-black text-sura-blue">290 × 8 + 30×13 = <span className="text-sura-blue-vivo">2,710m</span> = 45.2h</p>
-               <p className="text-[10px] font-bold text-teal-600 mt-2">+0.5% mediante IA (vs. Cálculo A)</p>
+             <div className="flex-1 p-4 rounded-2xl bg-sura-blue/5 border border-sura-blue/10 flex flex-col justify-center relative">
+               <h4 className="text-[10px] font-black tracking-widest uppercase text-sura-blue mb-2">B — 5 Min Adicionales <span className="text-[9px] font-semibold text-sura-blue/70">(Base)</span></h4>
+               <p className="text-lg font-black text-sura-blue tracking-tight">290 × 8 + 30×13 = <span className="text-sura-blue">2,710m</span> = 45.2h</p>
+               <span className="text-[9px] font-bold text-sura-blue/80 mt-1 absolute bottom-2 right-4">+5.8% mediante IA (vs. Cálculo A)</span>
              </div>
           </div>
           
-          {/* Progress Bars (Reverted to AS-IS / TO-BE) */}
-          <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
-             <div className="flex-1">
-               <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-bold">AS-IS</span><span className="text-[10px] font-black text-sura-blue">45.2h</span></div>
-               <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-blue h-full" style={{width: '90%'}}></div></div>
-             </div>
-             <div className="flex-1">
-               <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-bold">TO-BE</span><span className="text-[10px] font-black text-sura-cyan">~7.0h</span></div>
-               <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-cyan h-full" style={{width: '14%'}}></div></div>
-             </div>
+          <div className="relative pt-2">
+            <div className="flex justify-between text-[10px] font-black text-sura-blue mb-2">
+              <span className="text-sura-blue/80">AS-IS</span>
+              <span className="text-sura-blue">45.2h</span>
+              <span>TO-BE</span>
+              <span className="text-sura-cyan">~7.0h</span>
+            </div>
+            
+            <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden flex">
+              <div className="h-full bg-sura-blue w-full relative">
+                <div className="absolute right-0 top-0 h-full bg-sura-cyan" style={{ width: '15%' }}></div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -553,31 +556,31 @@ const Slide5Tech = () => (
       </div>
 
       {/* RIGHT COLUMN: IA (span 3/12) */}
-      <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-8 shadow-xl flex flex-col relative overflow-hidden">
+      <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden">
         <div className="z-10 relative flex-1 flex flex-col justify-between">
           <div>
-            <h3 className="text-[22px] font-black text-white mb-6 leading-tight flex items-center gap-3">
-              <Bot className="text-sura-yellow" size={28}/>
+            <h3 className="text-[20px] font-black text-white mb-5 leading-tight flex items-center gap-3">
+              <Bot className="text-sura-yellow shrink-0" size={24}/>
               Declaración de Uso de IA
             </h3>
-            <p className="text-white/90 text-[14px] leading-relaxed font-medium mb-8">
-              Uso de modelos generativos avanzados (Gemini / Claude) como <strong className="text-white bg-white/20 px-2 py-0.5 rounded">"Sparring Partner"</strong> estratégico para retar la lógica matemática, optimizar redacción y estructurar los hallazgos del rediseño.
+            <p className="text-white/90 text-[13px] leading-relaxed font-medium mb-6">
+              Uso de modelos generativos (Gemini / Claude) como <strong className="text-white bg-white/20 px-2 py-0.5 rounded">"Sparring Partner"</strong> para retar la lógica matemática y estructurar hallazgos.
             </p>
           </div>
           
-          <div className="bg-[#09152C]/60 rounded-[1.5rem] p-6 border border-white/10 mb-6 shadow-lg">
-            <h4 className="text-white font-black text-[15px] mb-5 flex items-center gap-2"><CheckCircle size={18} className="text-sura-yellow"/> Decisiones propias e Intelectuales</h4>
-            <ul className="text-white/80 text-[13px] leading-relaxed space-y-5">
-               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Arquitectura escalable en <strong>Power Platform + UiPath</strong> desde cero.</span></li>
-               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Detección de la causa raíz en la <strong>inconsistencia operativa</strong> de datos.</span></li>
-               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Creación de lógicas de negocio para derivación inteligente a <strong>HITL</strong>.</span></li>
-               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Criterio de oro: <strong>NO automatizar</strong> un proceso roto sin rediseñar el AS-IS.</span></li>
+          <div className="bg-[#09152C]/60 rounded-[1.5rem] p-5 border border-white/10 mb-4 shadow-lg flex-1 overflow-y-auto">
+            <h4 className="text-white font-black text-[14px] mb-4 flex items-center gap-2"><CheckCircle size={16} className="text-sura-yellow"/> Decisiones propias e Intelectuales</h4>
+            <ul className="text-white/80 text-[12px] leading-relaxed space-y-4">
+               <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Arquitectura escalable en <strong>Power Platform + UiPath</strong> desde cero.</span></li>
+               <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Detección de la causa raíz en la <strong>inconsistencia operativa</strong> de datos.</span></li>
+               <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Creación de lógicas de negocio para derivación a <strong>HITL</strong>.</span></li>
+               <li className="flex items-start gap-2.5"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> <span>Criterio de oro: <strong>NO automatizar</strong> procesos sin rediseñar el AS-IS.</span></li>
             </ul>
           </div>
           
-          <div className="flex items-start gap-3 text-blue-200/90 bg-white/5 p-4 rounded-xl border border-white/10 mt-auto">
+          <div className="flex items-start gap-3 text-blue-200/90 bg-white/5 p-3 rounded-xl border border-white/10 mt-auto">
              <Info size={16} className="shrink-0 mt-0.5 text-sura-cyan" />
-             <span className="text-[11px] font-medium leading-relaxed">La Inteligencia Artificial fungió estrictamente como un acelerador y estructurador.<br/>Las definiciones de arquitectura y lógica de negocio son <strong>100% de criterio propio.</strong></span>
+             <span className="text-[10px] font-medium leading-relaxed">La Inteligencia Artificial fungió como un acelerador. Las definiciones y lógica son <strong>100% de criterio propio.</strong></span>
           </div>
         </div>
       </div>
