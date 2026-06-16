@@ -330,6 +330,7 @@ const Slide4Gov = () => (
                     <ArrowRight size={16} className="text-slate-300" />
                     <span className={`font-black text-3xl tracking-tight ${k.textDark ? 'text-sura-dark' : k.color}`}>{k.to}</span>
                   </div>
+                </div>
                 <div className={`absolute -bottom-6 -right-6 opacity-[0.05] transition-transform duration-500 group-hover:scale-125 pointer-events-none ${k.textDark ? 'text-sura-dark' : k.color}`}>
                   {k.icon}
                 </div>
