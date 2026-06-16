@@ -221,11 +221,12 @@ const Slide2AsIs = () => (
                 <p className="text-[11px] text-sura-dark/60 font-medium mb-3">{item.desc}</p>
                 <span className={`mt-auto text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md ${item.type === 'Dolor' || item.type === 'Reproceso' || item.type === 'Riesgo' ? 'bg-red-100 text-sura-red' : 'bg-slate-200 text-sura-dark/50'}`}>{item.type}</span>
               </motion.div>
-              {i < arr.length - 1 && (
+              {i < arr.length - 1 && i !== 3 && (
                 <div className="hidden lg:flex shrink-0">
                   <ArrowRight size={28} className="text-slate-300" />
                 </div>
               )}
+              {i === 3 && <div className="w-full hidden lg:block h-4"></div>}
             </React.Fragment>
           ))}
         </div>
@@ -277,11 +278,12 @@ const Slide3ToBe = () => (
                 <p className="text-[11px] text-sura-dark/60 font-medium mb-3">{item.desc}</p>
                 <span className={`mt-auto text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-md ${item.type === 'Humano' ? 'bg-sura-cyan/20 text-sura-cyan' : 'bg-sura-green/20 text-sura-green'}`}>{item.type}</span>
               </motion.div>
-              {i < arr.length - 1 && (
+              {i < arr.length - 1 && i !== 2 && (
                 <div className="hidden lg:flex shrink-0">
                   <ArrowRight size={28} className="text-slate-300" />
                 </div>
               )}
+              {i === 2 && <div className="w-full hidden lg:block h-4"></div>}
              </React.Fragment>
           ))}
         </div>
