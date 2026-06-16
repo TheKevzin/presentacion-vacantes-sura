@@ -345,12 +345,14 @@ const Slide4Gov = () => (
           <div className="flex items-center justify-between mb-6 z-10">
             <h3 className="text-2xl font-black flex items-center gap-4 text-sura-blue"><ShieldCheck className="text-sura-aqua" size={32} strokeWidth={2.5}/> Reglas de Negocio</h3>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 z-10 overflow-y-auto slide-content pr-2">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 z-10 overflow-y-auto custom-scrollbar slide-content pr-2">
             {[
               { c: 'RN-01 CERO CORREO', t: 'Toda solicitud ingresa por formulario.' },
               { c: 'RN-02 TIPIFICACIÓN', t: 'Obligatoria y forzada desde el origen.' },
               { c: 'RN-03 VALIDACIÓN VIVO', t: 'Email regex, celular 10 dígitos.' },
-              { c: 'RN-04 EXCEPCIÓN NOMBRES', t: 'Corrección de nombre requiere intervención humana (HITL).', critical: true },
+              { c: 'RN-04 EXCEPCIÓN', t: 'Corrección manual obligatoria (HITL).', critical: true },
+              { c: 'RN-05 AUDITORÍA', t: 'Registro 100% de transacciones (Log).' },
+              { c: 'RN-06 FALLO SEGURO', t: 'Si RPA falla, derivar a cola manual.' },
             ].map((r, i) => (
               <div key={i} className={`p-4 rounded-2xl border transition-all hover:-translate-y-0.5 ${r.critical ? 'bg-red-50 border-red-200' : 'bg-slate-50 border-slate-200'}`}>
                 <span className={`font-black text-sm block mb-1 uppercase tracking-wider ${r.critical ? 'text-red-700' : 'text-sura-blue-vivo'}`}>{r.c}</span>
@@ -367,12 +369,14 @@ const Slide4Gov = () => (
           <div className="flex items-center justify-between mb-6 z-10">
             <h3 className="text-2xl font-black flex items-center gap-4 text-sura-blue"><AlertTriangle className="text-sura-red" size={32} strokeWidth={2.5}/> Matriz de Riesgos</h3>
           </div>
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 z-10 overflow-y-auto slide-content pr-2">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 z-10 overflow-y-auto custom-scrollbar slide-content pr-2">
             {[
               { lvl: 'CRÍTICO', color: 'bg-red-100 text-red-700 border-red-200', t: 'Automatizar sin rediseñar', d: 'Poner RPA a leer correos.' },
+              { lvl: 'ALTO', color: 'bg-orange-100 text-orange-700 border-orange-200', t: 'Downtime de Legacy', d: 'El core de seguros falla. Usar reintentos.' },
               { lvl: 'ALTO', color: 'bg-orange-100 text-orange-700 border-orange-200', t: 'ROI inflado', d: 'No descontar reprocesos del volumen.' },
+              { lvl: 'MEDIO', color: 'bg-yellow-100 text-yellow-800 border-yellow-200', t: 'API Limits', d: 'Saturación en Power Automate. Usar lotes.' },
               { lvl: 'MEDIO', color: 'bg-yellow-100 text-yellow-800 border-yellow-200', t: 'Resistencia al cambio', d: 'Analista teme perder control. Capacitar.' },
-              { lvl: 'MEDIO', color: 'bg-yellow-100 text-yellow-800 border-yellow-200', t: 'Baja Adopción', d: 'Responder automático con link al form.' },
+              { lvl: 'BAJO', color: 'bg-green-100 text-green-800 border-green-200', t: 'Baja Adopción', d: 'Responder automático con link al form.' },
             ].map((r, i) => (
               <div key={i} className="p-4 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-center">
                 <div className="flex items-center gap-2 mb-2">
