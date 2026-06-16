@@ -407,50 +407,50 @@ const Slide5Tech = () => (
       <div className="col-span-3 bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative overflow-hidden">
         <h3 className="text-base font-black text-sura-blue mb-6 flex items-center gap-2"><Layers size={20} className="text-sura-blue-vivo" /> Stack Propuesto</h3>
         
-        <div className="flex flex-col gap-5 flex-1 justify-between">
+        <div className="flex flex-col gap-4 flex-1 justify-between">
           {/* Item 1 */}
           <div className="flex flex-col">
-            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">INTERFAZ</span>
-            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
-              <Layers className="text-purple-600 shrink-0" size={26} />
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md w-fit mb-3">INTERFAZ</span>
+            <div className="flex items-center gap-5 bg-slate-50/80 p-4 xl:p-5 rounded-[1.5rem] border border-slate-100 shadow-sm">
+              <Layers className="text-purple-600 shrink-0" size={36} />
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power Apps / Forms</h4>
-                <p className="text-[10px] text-slate-500 font-medium leading-tight">Captura y validación en origen con reglas en tiempo real.</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1.5">Power Apps / Forms</h4>
+                <p className="text-[11px] xl:text-[12px] text-slate-500 font-medium leading-relaxed">Captura estructurada y validación en origen mediante reglas en tiempo real.</p>
               </div>
             </div>
           </div>
           {/* Item 2 */}
           <div className="flex flex-col">
-            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">MOTOR</span>
-            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
-              <Workflow className="text-blue-500 shrink-0" size={26} />
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md w-fit mb-3">MOTOR</span>
+            <div className="flex items-center gap-5 bg-slate-50/80 p-4 xl:p-5 rounded-[1.5rem] border border-slate-100 shadow-sm">
+              <Workflow className="text-blue-500 shrink-0" size={36} />
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power Automate</h4>
-                <p className="text-[10px] text-slate-500 font-medium leading-tight">Orquestador de lógica, enrutamiento y control (ETL).</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1.5">Power Automate</h4>
+                <p className="text-[11px] xl:text-[12px] text-slate-500 font-medium leading-relaxed">Orquestador core: enrutamiento lógico, control de estado y ETL de datos.</p>
               </div>
             </div>
           </div>
           {/* Item 3 */}
           <div className="flex flex-col">
-            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">RPA</span>
-            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
-              <div className="w-[26px] h-[26px] rounded bg-white border-2 border-[#FA4616] flex items-center justify-center shrink-0">
-                 <span className="text-[#FA4616] font-black text-[12px] leading-none">Ui</span>
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md w-fit mb-3">RPA</span>
+            <div className="flex items-center gap-5 bg-slate-50/80 p-4 xl:p-5 rounded-[1.5rem] border border-slate-100 shadow-sm">
+              <div className="w-[36px] h-[36px] rounded-lg bg-white border-2 border-[#FA4616] flex items-center justify-center shrink-0">
+                 <span className="text-[#FA4616] font-black text-[16px] leading-none">Ui</span>
               </div>
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">UiPath (RPA)</h4>
-                <p className="text-[10px] text-slate-500 font-medium leading-tight">Interacción automatizada con sistemas core (legacy).</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1.5">UiPath (RPA)</h4>
+                <p className="text-[11px] xl:text-[12px] text-slate-500 font-medium leading-relaxed">Interacción automatizada con sistemas core (legacy) sin fricciones.</p>
               </div>
             </div>
           </div>
           {/* Item 4 */}
           <div className="flex flex-col">
-            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">DATOS</span>
-            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
-              <BarChart2 className="text-yellow-500 shrink-0" size={26} />
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md w-fit mb-3">DATOS</span>
+            <div className="flex items-center gap-5 bg-slate-50/80 p-4 xl:p-5 rounded-[1.5rem] border border-slate-100 shadow-sm">
+              <BarChart2 className="text-yellow-500 shrink-0" size={36} />
               <div>
-                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power BI / Dataverse</h4>
-                <p className="text-[10px] text-slate-500 font-medium leading-tight">Medición de volumetría, cuellos de botella y adopción.</p>
+                <h4 className="font-extrabold text-sura-blue text-[15px] leading-tight mb-1.5">Power BI / Dataverse</h4>
+                <p className="text-[11px] xl:text-[12px] text-slate-500 font-medium leading-relaxed">Dashboards de volumetría, cuellos de botella y adopción del modelo.</p>
               </div>
             </div>
           </div>
