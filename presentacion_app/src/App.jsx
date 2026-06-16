@@ -397,8 +397,8 @@ const Slide5Tech = () => (
   <div className="flex-1 flex flex-col px-12 lg:px-20 pb-28 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
     <div className="mb-6 shrink-0">
       <span className="text-sura-blue-vivo text-xs font-black tracking-widest uppercase flex items-center gap-3 mb-2"><div className="w-8 h-[2px] bg-sura-blue-vivo"></div> Stack y Criterio de Datos</span>
-      <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack, Análisis de Volumen y Uso de IA</h2>
-      <p className="text-sura-dark/70 text-base mt-2 max-w-4xl font-medium">Arquitectura Microsoft Power Platform + UiPath, análisis de volumen y declaración de uso de IA.</p>
+      <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack Tecnológico y Análisis de Volumen</h2>
+      <p className="text-sura-dark/70 text-base mt-2 max-w-4xl font-medium">Arquitectura Microsoft Power Platform + UiPath y justificación matemática del esfuerzo operativo.</p>
     </div>
 
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 flex-1 h-full min-h-0">
@@ -450,56 +450,33 @@ const Slide5Tech = () => (
 
       {/* RIGHT COLUMN: Análisis de Volumen & IA Declaration */}
       <div className="flex flex-col gap-4 min-h-0">
-        <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-lg flex flex-col relative shrink-0">
+        <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-lg flex flex-col relative flex-1">
           <h3 className="text-lg font-black text-sura-blue mb-4">Análisis de Volumen · Criterio Propio</h3>
           
           <div className="flex flex-col gap-3 z-10 mb-5">
              <div className="p-4 rounded-xl border border-slate-200 bg-slate-50 flex flex-col justify-center">
-               <h4 className="text-[10px] font-black tracking-widest uppercase text-slate-500 mb-1">A — 5 Min en Promedio</h4>
-               <p className="text-sm font-mono font-bold text-sura-dark">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
+               <h4 className="text-xs font-black tracking-widest uppercase text-slate-500 mb-2">A — Sin contar reprocesos (Falso)</h4>
+               <p className="text-lg font-mono font-bold text-sura-dark">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
              </div>
-             <div className="p-4 rounded-xl border border-sura-blue/30 bg-sura-blue/5 flex flex-col justify-center">
-               <h4 className="text-[10px] font-black tracking-widest uppercase text-sura-blue-vivo mb-1">B — 5 Min Adicionales (Base)</h4>
-               <p className="text-sm font-mono font-bold text-sura-dark">290×8 + 30×13 = <span className="text-sura-blue-vivo">2,710m</span> = 45.2h</p>
-               <p className="text-[11px] font-bold text-sura-cyan mt-1">Δ = 150 min/día (~2.5h por "No Calidad")</p>
+             <div className="p-5 rounded-xl border border-sura-blue/30 bg-sura-blue/5 flex flex-col justify-center">
+               <h4 className="text-xs font-black tracking-widest uppercase text-sura-blue-vivo mb-2">B — Contando 30 reprocesos (Real)</h4>
+               <p className="text-xl font-mono font-black text-sura-dark">290×8 + 30×13 = <span className="text-sura-blue-vivo">2,710m</span> = 45.2h</p>
+               <p className="text-sm font-bold text-sura-cyan mt-2">Δ = 150 min extra al día (~2.5 horas perdidas por "No Calidad")</p>
              </div>
           </div>
 
-          <h4 className="text-[11px] font-black tracking-widest uppercase text-slate-400 mb-3 text-center">Esfuerzo Diario (Horas)</h4>
-          <div className="flex flex-col gap-3">
-             <div className="flex items-center gap-3">
-               <span className="w-20 text-xs font-bold text-right">AS-IS</span>
-               <div className="flex-1 bg-slate-100 rounded-full h-3.5 overflow-hidden"><div className="bg-sura-blue h-full" style={{width: '90%'}}></div></div>
-               <span className="w-8 text-xs font-bold text-sura-blue">45.2</span>
+          <h4 className="text-xs font-black tracking-widest uppercase text-slate-400 mt-4 mb-4 text-center">Esfuerzo Diario Total (Horas)</h4>
+          <div className="flex flex-col gap-5">
+             <div className="flex items-center gap-4">
+               <span className="w-24 text-sm font-bold text-right">Actual (AS-IS)</span>
+               <div className="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div className="bg-sura-blue h-full" style={{width: '90%'}}></div></div>
+               <span className="w-12 text-sm font-black text-sura-blue">45.2 h</span>
              </div>
-             <div className="flex items-center gap-3">
-               <span className="w-20 text-xs font-bold text-right">TO-BE</span>
-               <div className="flex-1 bg-slate-100 rounded-full h-3.5 overflow-hidden"><div className="bg-sura-cyan h-full" style={{width: '14%'}}></div></div>
-               <span className="w-8 text-xs font-black text-sura-cyan">~7.0</span>
+             <div className="flex items-center gap-4">
+               <span className="w-24 text-sm font-bold text-right">Futuro (TO-BE)</span>
+               <div className="flex-1 bg-slate-100 rounded-full h-5 overflow-hidden"><div className="bg-sura-cyan h-full" style={{width: '14%'}}></div></div>
+               <span className="w-12 text-sm font-black text-sura-cyan">~7.0 h</span>
              </div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-br from-sura-blue to-sura-dark border border-sura-blue/50 rounded-3xl p-6 shadow-xl flex-1 flex flex-col relative overflow-hidden justify-center">
-          <div className="absolute -top-10 -right-10 w-48 h-48 bg-sura-cyan/20 blur-2xl rounded-full"></div>
-          
-          <h3 className="text-lg font-black text-white mb-3 flex items-center gap-2 z-10"><Bot className="text-sura-yellow" size={20}/> Declaración de Uso de IA</h3>
-          <div className="z-10 relative pr-2">
-            <p className="text-white/80 text-xs leading-relaxed font-medium">
-              Uso de IA (Gemini/Claude) como <strong className="text-white">"Sparring Partner"</strong> para estructurar y retar volumetría.
-            </p>
-            <p className="text-sura-yellow font-bold text-xs mt-3 mb-1.5">
-              Decisiones propias:
-            </p>
-            <ul className="text-white/80 text-xs leading-relaxed list-disc pl-4 space-y-1">
-               <li>Arquitectura Power Platform + UiPath.</li>
-               <li>Detección de inconsistencia (320 vs 350).</li>
-               <li>Priorización de intervención humana para nombres.</li>
-               <li>Criterio de NO automatizar sin rediseñar.</li>
-            </ul>
-            <p className="text-sura-cyan/80 text-[10px] font-bold uppercase tracking-widest mt-4 leading-tight">
-              La IA fue acelerador; las decisiones arquitectónicas son de criterio profesional propio.
-            </p>
           </div>
         </div>
       </div>
@@ -507,9 +484,51 @@ const Slide5Tech = () => (
   </div>
 );
 
+const Slide6AI = () => (
+  <div className="h-full w-full px-12 py-8 flex flex-col slide-content overflow-y-auto items-center justify-center">
+    <div className="mb-10 shrink-0 text-center">
+      <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Declaración de Uso de IA</h2>
+      <p className="text-sura-dark/70 text-lg mt-3 max-w-2xl mx-auto font-medium">Transparencia sobre el uso de herramientas de Inteligencia Artificial en el diseño de esta propuesta.</p>
+    </div>
+
+    <div className="w-full max-w-5xl bg-gradient-to-br from-sura-blue to-sura-dark border border-sura-blue/50 rounded-[2.5rem] p-12 shadow-2xl flex flex-col relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-sura-cyan/20 blur-3xl rounded-full translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-sura-green/10 blur-3xl rounded-full -translate-x-1/3 translate-y-1/3"></div>
+      
+      <div className="z-10 relative pr-2 flex flex-col items-center text-center">
+        <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-6 shadow-inner backdrop-blur-md">
+          <Bot className="text-sura-yellow" size={40}/>
+        </div>
+        
+        <p className="text-white/90 text-xl leading-relaxed font-medium max-w-3xl mb-8">
+          Uso de IA (Gemini/Claude) como <strong className="text-white bg-white/10 px-3 py-1 rounded-lg mx-1">"Sparring Partner"</strong> para estructurar ideas, mejorar la redacción y retar la volumetría matemática.
+        </p>
+        
+        <div className="w-full bg-black/20 rounded-3xl p-8 border border-white/10">
+          <h4 className="text-sura-yellow font-black text-lg mb-6 flex items-center justify-center gap-2"><Check size={20}/> Decisiones Arquitectónicas Propias</h4>
+          <ul className="text-white text-base leading-relaxed text-left grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+             <li className="flex items-start gap-3"><span className="text-sura-cyan font-bold">•</span> Elección de arquitectura: Power Platform + UiPath.</li>
+             <li className="flex items-start gap-3"><span className="text-sura-cyan font-bold">•</span> Detección de inconsistencia operativa (320 vs 350).</li>
+             <li className="flex items-start gap-3"><span className="text-sura-cyan font-bold">•</span> Priorización de intervención humana (HITL) para corrección de nombres.</li>
+             <li className="flex items-start gap-3"><span className="text-sura-cyan font-bold">•</span> Criterio de negocio: NO automatizar sin rediseñar el proceso.</li>
+          </ul>
+        </div>
+        
+        <p className="text-sura-cyan/90 text-sm font-black uppercase tracking-widest mt-8 leading-tight">
+          La IA fue un acelerador estratégico. <br className="hidden md:block"/>Las decisiones finales de negocio son de criterio profesional propio.
+        </p>
+      </div>
+    </div>
+  </div>
+);
+      </div>
+    </div>
+  </div>
+);
+
 export default function App() {
   const [slide, setSlide] = useState(0);
-  const slides = [<Slide0Cover />, <Slide1Problem />, <Slide2AsIs />, <Slide3ToBe />, <Slide4Gov />, <Slide5Tech />];
+  const slides = [<Slide0Cover />, <Slide1Problem />, <Slide2AsIs />, <Slide3ToBe />, <Slide4Gov />, <Slide5Tech />, <Slide6AI />];
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -524,7 +543,7 @@ export default function App() {
 
   return (
     <div className={`h-screen w-screen flex flex-col transition-colors duration-700 ${isDarkSlide ? 'bg-sura-blue' : 'bg-slate-50'}`}>
-      <SlideHeader title={['Portada', 'Problema', 'AS-IS', 'TO-BE', 'Gobernanza', 'Tecnología'][slide]} isDark={isDarkSlide} />
+      <SlideHeader title={['Portada', 'Problema', 'AS-IS', 'TO-BE', 'Gobernanza', 'Tecnología', 'Declaración IA'][slide]} isDark={isDarkSlide} />
       
       <div className="flex-1 relative overflow-hidden">
         <AnimatePresence mode="wait">
