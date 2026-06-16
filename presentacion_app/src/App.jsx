@@ -494,50 +494,58 @@ const Slide5Tech = () => (
         {/* STP & HITL Row */}
         <div className="grid grid-cols-2 gap-5 flex-1 min-h-0">
            {/* STP */}
-           <div className="bg-white border border-sura-cyan/30 rounded-[2rem] p-5 shadow-md flex flex-col justify-between">
-             <div>
-               <h4 className="text-[13px] font-black text-sura-cyan mb-4 flex items-center gap-2">
-                 <Zap className="text-white bg-sura-cyan p-1 rounded-md" size={24} /> 
-                 Procesamiento Directo (STP)
-               </h4>
-               <div className="grid grid-cols-2 gap-2 mb-4">
-                 {[
-                   { name: 'Val. Formatos', icon: FileText },
-                   { name: 'Búsqueda RD', icon: Search },
-                   { name: 'Actualizar', icon: RefreshCw },
-                   { name: 'Notificar', icon: Bell }
-                 ].map(tag => (
-                   <div key={tag.name} className="bg-sura-cyan/5 px-2 py-3 rounded-xl border border-sura-cyan/20 flex items-center gap-2">
+           <div className="bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col justify-between">
+             <h4 className="text-[14px] font-black text-sura-blue mb-4 flex items-center gap-2">
+               <Zap className="text-sura-blue-vivo" size={20} /> 
+               Procesamiento Directo (STP)
+             </h4>
+             <div className="grid grid-cols-2 grid-rows-2 gap-3 mb-4 flex-1">
+               {[
+                 { name: 'Val. Formatos', icon: FileText, desc: 'Verifica estructura e integridad del input.' },
+                 { name: 'Búsqueda BD', icon: Search, desc: 'Consulta automática de registros previos.' },
+                 { name: 'Actualizar', icon: RefreshCw, desc: 'Modificación directa de la base de datos.' },
+                 { name: 'Notificar', icon: Bell, desc: 'Envío de alertas automáticas vía email.' }
+               ].map(tag => (
+                 <div key={tag.name} className="bg-slate-50 p-3 rounded-[1rem] border border-slate-100 flex flex-col justify-center hover:border-sura-cyan/50 hover:bg-sura-cyan/5 transition-colors">
+                   <div className="flex items-center gap-1.5 mb-1.5">
                      <tag.icon size={14} className="text-sura-cyan shrink-0"/>
-                     <span className="text-[10px] font-bold text-sura-cyan leading-tight">{tag.name}</span>
+                     <span className="text-[11px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
                    </div>
-                 ))}
-               </div>
+                   <p className="text-[9px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
+                 </div>
+               ))}
              </div>
-             <div className="flex items-start gap-2 text-sura-cyan/80 mt-auto">
-               <Info size={14} className="shrink-0 mt-0.5" />
-               <span className="text-[10px] font-semibold leading-tight">Flujos automáticos sin intervención manual.</span>
+             <div className="flex items-start gap-2 text-slate-500 mt-auto">
+               <Info size={14} className="shrink-0 mt-0.5 text-sura-cyan" />
+               <span className="text-[10px] font-medium leading-tight">Flujos automáticos sin intervención manual.</span>
              </div>
            </div>
 
            {/* HITL */}
-           <div className="bg-sura-blue border border-sura-dark rounded-[2rem] p-5 shadow-lg flex flex-col justify-between relative overflow-hidden">
-             <div>
-               <h4 className="text-[13px] font-black text-white mb-4 flex items-center gap-2 relative z-10">
-                 <User className="text-sura-blue bg-white p-1 rounded-md" size={24} /> 
-                 Intervención Humana (HITL)
-               </h4>
-               <div className="grid grid-cols-2 gap-2 mb-4 relative z-10">
-                 {['Monitoreo', 'No Encontrado', 'Inconsistencias', 'Creación RD'].map(tag => (
-                   <div key={tag} className="bg-sura-dark/40 px-2 py-3 rounded-xl border border-white/10 flex items-center justify-center text-center">
-                     <span className="text-[10px] font-medium text-white leading-tight">{tag}</span>
+           <div className="bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col justify-between">
+             <h4 className="text-[14px] font-black text-sura-blue mb-4 flex items-center gap-2">
+               <User className="text-sura-blue-vivo" size={20} /> 
+               Intervención Humana (HITL)
+             </h4>
+             <div className="grid grid-cols-2 grid-rows-2 gap-3 mb-4 flex-1">
+               {[
+                 { name: 'Monitoreo', icon: Activity, desc: 'Revisión constante del flujo de trabajo.' },
+                 { name: 'No Encontrado', icon: Target, desc: 'Gestión de registros sin coincidencias.' },
+                 { name: 'Inconsistencias', icon: AlertTriangle, desc: 'Resolución de errores de formato/datos.' },
+                 { name: 'Creación RD', icon: Database, desc: 'Creación manual justificada en sistema.' }
+               ].map(tag => (
+                 <div key={tag.name} className="bg-slate-50 p-3 rounded-[1rem] border border-slate-100 flex flex-col justify-center hover:border-sura-blue-vivo/50 hover:bg-sura-blue-vivo/5 transition-colors">
+                   <div className="flex items-center gap-1.5 mb-1.5">
+                     <tag.icon size={14} className="text-sura-blue-vivo shrink-0"/>
+                     <span className="text-[11px] font-extrabold text-sura-blue leading-tight">{tag.name}</span>
                    </div>
-                 ))}
-               </div>
+                   <p className="text-[9px] text-slate-500 font-medium leading-tight">{tag.desc}</p>
+                 </div>
+               ))}
              </div>
-             <div className="flex items-start gap-2 text-sura-cyan mt-auto relative z-10">
-               <Info size={14} className="shrink-0 mt-0.5" />
-               <span className="text-[10px] font-medium leading-tight text-white/80">Manejo de excepciones y validaciones críticas.</span>
+             <div className="flex items-start gap-2 text-slate-500 mt-auto">
+               <Info size={14} className="shrink-0 mt-0.5 text-sura-blue-vivo" />
+               <span className="text-[10px] font-medium leading-tight">Manejo de excepciones y validaciones críticas.</span>
              </div>
            </div>
         </div>
