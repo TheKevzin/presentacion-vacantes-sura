@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Activity, AlertTriangle, ShieldCheck, Mail, RefreshCw, Brain, Settings, Users, ArrowRight, CheckCircle2, Zap, Database, ServerCog, FileText, Check, Bot, TrendingDown, Clock, Target, AlertCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Activity, AlertTriangle, ShieldCheck, Mail, RefreshCw, Brain, Settings, Users, ArrowRight, CheckCircle2, Zap, Database, ServerCog, FileText, Check, Bot, TrendingDown, Clock, Target, AlertCircle, Layers, Workflow, BarChart2, Search, Bell, Info, LineChart, User, CheckCircle, Lightbulb } from 'lucide-react';
 import logoSura from './assets/logo-sura.svg';
 
 // --- COMPONENTES BASE ---
@@ -395,125 +395,183 @@ const Slide4Gov = () => (
 
 const Slide5Tech = () => (
   <div className="flex-1 flex flex-col px-12 lg:px-20 pb-24 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
-    <div className="mb-6 shrink-0">
+    <div className="mb-8 shrink-0">
       <span className="text-sura-blue-vivo text-xs font-black tracking-widest uppercase flex items-center gap-3 mb-2"><div className="w-8 h-[2px] bg-sura-blue-vivo"></div> Stack y Criterio de Datos</span>
       <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack, Análisis de Volumen y Uso de IA</h2>
       <p className="text-sura-dark/70 text-base mt-2 max-w-4xl font-medium">Arquitectura Microsoft Power Platform + UiPath, análisis de volumen y declaración de uso de IA.</p>
     </div>
 
-    <div className="grid grid-cols-4 grid-rows-[auto_1fr] gap-5 flex-1 min-h-0">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 flex-1 min-h-0">
       
-      {/* COLUMN 1: Stack (row-span-2) */}
-      <div className="col-span-1 row-span-2 bg-white border border-slate-200 rounded-[2rem] p-5 shadow-lg flex flex-col relative overflow-hidden">
-        <h3 className="text-base font-black text-sura-blue mb-4">Stack Propuesto</h3>
-        <div className="flex flex-col gap-3 flex-1 justify-center">
-          {[
-            { name: 'Power Apps / Forms', role: 'ENTRADA', desc: 'Validación en origen.' },
-            { name: 'Power Automate', role: 'MOTOR', desc: 'Orquestación BPM.' },
-            { name: 'UiPath (RPA)', role: 'RPA', desc: 'Interacción legacy.' },
-            { name: 'Power BI / Dataverse', role: 'DATOS', desc: 'Volumetría y tiempos.' }
-          ].map((t, i) => (
-            <div key={i} className="flex flex-col p-3 rounded-2xl border border-slate-100 bg-slate-50 relative group hover:bg-sura-blue/5 transition-colors">
-               <div className="flex justify-between items-start mb-1">
-                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{t.role}</span>
-               </div>
-               <h4 className="font-extrabold text-sura-blue text-sm leading-tight mb-1">{t.name}</h4>
-               <p className="text-[11px] text-sura-dark/60 font-medium leading-tight">{t.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* COLUMN 2 & 3: Volumen (row-span-1, col-span-2) */}
-      <div className="col-span-2 row-span-1 bg-white border border-slate-200 rounded-[2rem] p-5 shadow-lg flex flex-col relative justify-center">
-        <h3 className="text-base font-black text-sura-blue mb-3">Análisis de Volumen · Criterio Propio</h3>
-        <div className="flex gap-3 mb-3">
-           <div className="flex-1 p-3 rounded-2xl border border-slate-100 bg-slate-50 flex flex-col justify-center">
-             <h4 className="text-[10px] font-black tracking-widest uppercase text-slate-500 mb-1">A — 5 Min en Promedio</h4>
-             <p className="text-base font-mono font-bold text-sura-dark">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
-           </div>
-           <div className="flex-[1.2] p-4 rounded-2xl border border-sura-blue/30 bg-sura-blue/5 flex flex-col justify-center relative overflow-hidden group">
-             <div className="absolute top-0 left-0 w-1 h-full bg-sura-blue-vivo group-hover:w-1.5 transition-all"></div>
-             <h4 className="text-[10px] font-black tracking-widest uppercase text-sura-blue-vivo mb-1">B — 5 Min Adicionales (Base)</h4>
-             <p className="text-lg font-mono font-black text-sura-dark leading-tight">290×8 + 30×13 = <span className="text-sura-blue-vivo">2,710m</span> = 45.2h</p>
-             <p className="text-[10px] font-bold text-sura-cyan mt-1 leading-tight">Δ = 150 min/día (~2.5h por "No Calidad")</p>
-           </div>
-        </div>
-        <div className="flex items-center gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-100">
-           <div className="flex-1">
-             <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-bold">AS-IS</span><span className="text-[10px] font-black text-sura-blue">45.2</span></div>
-             <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-blue h-full" style={{width: '90%'}}></div></div>
-           </div>
-           <div className="flex-1">
-             <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-bold">TO-BE</span><span className="text-[10px] font-black text-sura-cyan">~7.0</span></div>
-             <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-cyan h-full" style={{width: '14%'}}></div></div>
-           </div>
-        </div>
-      </div>
-
-      {/* COLUMN 4: IA (row-span-2) */}
-      <div className="col-span-1 row-span-2 bg-gradient-to-br from-sura-blue to-sura-dark border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden justify-between">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-sura-cyan/20 blur-2xl rounded-full translate-x-1/4 -translate-y-1/4"></div>
-        <div className="absolute bottom-0 left-0 w-32 h-32 bg-sura-yellow/10 blur-2xl rounded-full -translate-x-1/4 translate-y-1/4"></div>
+      {/* LEFT COLUMN: Stack (span 3/12) */}
+      <div className="col-span-3 bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative overflow-hidden">
+        <h3 className="text-base font-black text-sura-blue mb-6 flex items-center gap-2"><Layers size={20} className="text-sura-blue-vivo" /> Stack Propuesto</h3>
         
+        <div className="flex flex-col gap-5 flex-1 justify-center">
+          {/* Item 1 */}
+          <div className="flex flex-col">
+            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">INTERFAZ</span>
+            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
+              <Layers className="text-purple-600 shrink-0" size={26} />
+              <div>
+                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power Apps / Forms</h4>
+                <p className="text-[10px] text-slate-500 font-medium">Validación en origen.</p>
+              </div>
+            </div>
+          </div>
+          {/* Item 2 */}
+          <div className="flex flex-col">
+            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">MOTOR</span>
+            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
+              <Workflow className="text-blue-500 shrink-0" size={26} />
+              <div>
+                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power Automate</h4>
+                <p className="text-[10px] text-slate-500 font-medium">Orquestación ETL.</p>
+              </div>
+            </div>
+          </div>
+          {/* Item 3 */}
+          <div className="flex flex-col">
+            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">RPA</span>
+            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
+              <div className="w-[26px] h-[26px] rounded bg-white border-2 border-[#FA4616] flex items-center justify-center shrink-0">
+                 <span className="text-[#FA4616] font-black text-[12px] leading-none">Ui</span>
+              </div>
+              <div>
+                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">UiPath (RPA)</h4>
+                <p className="text-[10px] text-slate-500 font-medium">Interacción legacy.</p>
+              </div>
+            </div>
+          </div>
+          {/* Item 4 */}
+          <div className="flex flex-col">
+            <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 mb-2">DATOS</span>
+            <div className="flex items-center gap-4 bg-slate-50/80 p-3 rounded-2xl">
+              <BarChart2 className="text-yellow-500 shrink-0" size={26} />
+              <div>
+                <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power BI / Dataverse</h4>
+                <p className="text-[10px] text-slate-500 font-medium">Volúmenes y tiempos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CENTER COLUMN: Volumen + STP/HITL (span 6/12) */}
+      <div className="col-span-6 flex flex-col gap-5 min-h-0">
+        
+        {/* Volumen Card */}
+        <div className="bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative justify-center">
+          <h3 className="text-base font-black text-sura-blue mb-5 flex items-center gap-2"><LineChart size={20} className="text-sura-blue-vivo"/> Análisis de Volumen · Criterio Propio</h3>
+          
+          <div className="flex gap-4 mb-6">
+             {/* A Block */}
+             <div className="flex-1 p-4 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
+               <h4 className="text-[10px] font-black tracking-widest uppercase text-slate-500 mb-2">A — 5 Min en Promedio</h4>
+               <p className="text-lg font-mono font-bold text-sura-dark">320 × 8m = <span className="text-sura-red">2,560m</span> = 42.7h</p>
+             </div>
+             {/* B Block */}
+             <div className="flex-[1.2] p-4 rounded-2xl bg-[#f0f9ff] border border-[#bae6fd] flex flex-col justify-center relative">
+               <h4 className="text-[10px] font-black tracking-widest uppercase text-sura-blue-vivo mb-2">B — 5 Min Adicionales (Base)</h4>
+               <p className="text-lg font-mono font-black text-sura-blue">290 × 8 + 30×13 = <span className="text-sura-blue-vivo">2,710m</span> = 45.2h</p>
+               <p className="text-[10px] font-bold text-teal-600 mt-2">+0.5% mediante IA (vs. Cálculo A)</p>
+             </div>
+          </div>
+          
+          {/* Progress Bars */}
+          <div className="flex items-center gap-3">
+             <div className="flex-[0.95]">
+               <span className="text-[11px] font-black text-sura-blue mb-1 block">A: 95%</span>
+               <div className="w-full bg-sura-blue rounded-full h-2"></div>
+             </div>
+             <div className="flex-[0.1] flex items-center gap-2">
+               <div className="flex-1">
+                 <span className="text-[11px] font-black text-teal-500 mb-1 block">B: 5%</span>
+                 <div className="w-full bg-teal-400 rounded-full h-2"></div>
+               </div>
+               <span className="text-[11px] font-black text-teal-500 mt-4">+0.5%</span>
+             </div>
+          </div>
+        </div>
+
+        {/* STP & HITL Row */}
+        <div className="grid grid-cols-2 gap-5 flex-1 min-h-0">
+           {/* STP */}
+           <div className="bg-[#f0fdf4] border border-[#bbf7d0] rounded-[2rem] p-5 shadow-sm flex flex-col justify-between">
+             <div>
+               <h4 className="text-[13px] font-black text-sura-green mb-4 flex items-center gap-2">
+                 <Zap className="text-white bg-sura-green p-1 rounded-md" size={24} /> 
+                 Procesamiento Directo (STP)
+               </h4>
+               <div className="grid grid-cols-2 gap-2 mb-4">
+                 {[
+                   { name: 'Val. Formatos', icon: FileText },
+                   { name: 'Búsqueda RD', icon: Search },
+                   { name: 'Actualizar', icon: RefreshCw },
+                   { name: 'Notificar', icon: Bell }
+                 ].map(tag => (
+                   <div key={tag.name} className="bg-white px-2 py-3 rounded-xl border border-sura-green/20 shadow-sm flex items-center gap-2">
+                     <tag.icon size={14} className="text-sura-green shrink-0"/>
+                     <span className="text-[10px] font-bold text-sura-green leading-tight">{tag.name}</span>
+                   </div>
+                 ))}
+               </div>
+             </div>
+             <div className="flex items-start gap-2 text-sura-green/80 mt-auto">
+               <Info size={14} className="shrink-0 mt-0.5" />
+               <span className="text-[10px] font-semibold leading-tight">Flujos automáticos sin intervención manual.</span>
+             </div>
+           </div>
+
+           {/* HITL */}
+           <div className="bg-slate-900 border border-slate-800 rounded-[2rem] p-5 shadow-lg flex flex-col justify-between">
+             <div>
+               <h4 className="text-[13px] font-black text-white mb-4 flex items-center gap-2">
+                 <User className="text-white bg-sura-cyan p-1 rounded-md" size={24} /> 
+                 Intervención Humana (HITL)
+               </h4>
+               <div className="grid grid-cols-2 gap-2 mb-4">
+                 {['Monitoreo', 'No Encontrado', 'Inconsistencias', 'Creación RD'].map(tag => (
+                   <div key={tag} className="bg-[#1e293b] px-2 py-3 rounded-xl border border-sura-cyan/20 flex items-center justify-center text-center">
+                     <span className="text-[10px] font-medium text-blue-200 leading-tight">{tag}</span>
+                   </div>
+                 ))}
+               </div>
+             </div>
+             <div className="flex items-start gap-2 text-blue-200/60 mt-auto">
+               <Info size={14} className="shrink-0 mt-0.5" />
+               <span className="text-[10px] font-medium leading-tight">Manejo de excepciones y validaciones críticas.</span>
+             </div>
+           </div>
+        </div>
+
+      </div>
+
+      {/* RIGHT COLUMN: IA (span 3/12) */}
+      <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden">
         <div className="z-10 relative flex-1 flex flex-col">
-          <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-4 shadow-inner backdrop-blur-sm">
+          <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-5 shadow-inner backdrop-blur-sm border border-white/10">
             <Bot className="text-sura-yellow" size={24}/>
           </div>
-          <h3 className="text-base font-black text-white mb-3">Declaración IA</h3>
-          <p className="text-white/80 text-xs leading-relaxed font-medium mb-5">
-            Uso de IA (Gemini/Claude) como <strong className="text-white bg-white/10 px-1.5 py-0.5 rounded">"Sparring Partner"</strong> para estructurar y retar volumetría.
+          <h3 className="text-lg font-black text-white mb-4">Declaración IA</h3>
+          <p className="text-white/90 text-xs leading-relaxed font-medium mb-6">
+            Uso de IA (Gemini/Claude) como <strong className="text-white bg-white/20 px-1.5 py-0.5 rounded">"Sparring Partner"</strong> para estructurar y retar volumetría.
           </p>
           
-          <div className="bg-black/20 rounded-xl p-5 border border-white/5 mt-auto mb-2">
-            <h4 className="text-sura-yellow font-black text-xs uppercase tracking-widest mb-3 flex items-center gap-1.5"><Check size={14}/> Decisiones propias</h4>
-            <ul className="text-white/90 text-xs leading-relaxed space-y-2.5">
-               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Arquitectura Power Platform + UiPath.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Detección inconsistencia.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Priorización HITL para nombres.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-cyan font-bold mt-0.5">•</span> Criterio: NO automatizar sin rediseñar.</li>
+          <div className="bg-[#09152C]/60 rounded-xl p-5 border border-white/5 mt-auto mb-4">
+            <h4 className="text-white font-black text-sm mb-4 flex items-center gap-2"><CheckCircle size={16} className="text-sura-yellow"/> Decisiones propias</h4>
+            <ul className="text-white/80 text-xs leading-relaxed space-y-4">
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Arquitectura Power Platform + UiPath.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Detección inconsistencias.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Priorización HITL para nombres.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Criterio RD automatizar sin rediseñar.</li>
             </ul>
           </div>
-        </div>
-        
-        <p className="text-sura-cyan/80 text-[10px] font-black uppercase tracking-widest leading-tight text-center mt-4 z-10">
-          La IA fue acelerador. Decisiones de criterio propio.
-        </p>
-      </div>
-
-      {/* ROW 2 - COLUMN 2: STP (col-span-1) */}
-      <div className="col-span-1 row-span-1 bg-[#f0fdf4] border border-[#bbf7d0] rounded-[2rem] p-5 shadow-sm flex flex-col justify-between relative overflow-hidden group">
-        <Zap className="absolute -bottom-4 -right-4 text-sura-green opacity-[0.03] group-hover:scale-110 transition-transform duration-500" size={120} />
-        <div className="z-10">
-          <div className="w-8 h-8 rounded-full bg-sura-green/20 flex items-center justify-center text-sura-green mb-3">
-            <Zap size={16} fill="currentColor" />
+          
+          <div className="flex items-start gap-2 text-blue-200/80 bg-white/5 p-3 rounded-xl border border-white/5">
+             <Info size={14} className="shrink-0 mt-0.5" />
+             <span className="text-[10px] font-medium leading-tight">La IA fue facilitador.<br/>Decisiones de criterio propio.</span>
           </div>
-          <h4 className="text-xs font-black text-sura-green mb-2 leading-tight">PROCESAMIENTO DIRECTO (STP)</h4>
-        </div>
-        <div className="grid grid-cols-2 gap-2 z-10 mt-auto">
-          {['Val. Formato', 'Búsqueda BD', 'Actualizar', 'Notificar'].map(tag => (
-            <div key={tag} className="bg-white/80 p-2 rounded-xl shadow-sm border border-sura-green/20 flex items-center justify-center text-center min-h-[40px]">
-              <span className="text-[10px] font-bold text-sura-green leading-tight">{tag}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* ROW 2 - COLUMN 3: HITL (col-span-1) */}
-      <div className="col-span-1 row-span-1 bg-slate-900 border border-slate-800 rounded-[2rem] p-5 shadow-lg flex flex-col justify-between relative overflow-hidden group">
-        <Users className="absolute -bottom-4 -right-4 text-sura-cyan opacity-5 group-hover:scale-110 transition-transform duration-500" size={120} />
-        <div className="z-10">
-          <div className="w-8 h-8 rounded-full bg-sura-cyan/20 flex items-center justify-center text-sura-cyan mb-3">
-            <Users size={16} />
-          </div>
-          <h4 className="text-xs font-black text-white mb-2 leading-tight">INTERVENCIÓN HUMANA (HITL)</h4>
-        </div>
-        <div className="grid grid-cols-2 gap-2 z-10 mt-auto">
-          {['Nombres', 'No Encontrado', 'Inconsistencias', 'Conexión BD'].map(tag => (
-            <div key={tag} className="bg-slate-800/80 p-2 rounded-xl shadow-sm border border-sura-cyan/20 flex items-center justify-center text-center min-h-[40px]">
-              <span className="text-[10px] font-bold text-sura-cyan leading-tight">{tag}</span>
-            </div>
-          ))}
         </div>
       </div>
 
