@@ -553,29 +553,31 @@ const Slide5Tech = () => (
       </div>
 
       {/* RIGHT COLUMN: IA (span 3/12) */}
-      <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden">
-        <div className="z-10 relative flex-1 flex flex-col">
-          <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-5 shadow-inner backdrop-blur-sm border border-white/10">
-            <Bot className="text-sura-yellow" size={24}/>
+      <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-8 shadow-xl flex flex-col relative overflow-hidden">
+        <div className="z-10 relative flex-1 flex flex-col justify-between">
+          <div>
+            <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 shadow-inner backdrop-blur-sm border border-white/10">
+              <Bot className="text-sura-yellow" size={28}/>
+            </div>
+            <h3 className="text-[22px] font-black text-white mb-4 leading-tight">Declaración de Uso de IA</h3>
+            <p className="text-white/90 text-[14px] leading-relaxed font-medium mb-8">
+              Uso de modelos generativos avanzados (Gemini / Claude) como <strong className="text-white bg-white/20 px-2 py-0.5 rounded">"Sparring Partner"</strong> estratégico para retar la lógica matemática, optimizar redacción y estructurar los hallazgos del rediseño.
+            </p>
           </div>
-          <h3 className="text-lg font-black text-white mb-3">Declaración IA</h3>
-          <p className="text-white/90 text-xs leading-relaxed font-medium mb-6">
-            Uso de modelos avanzados (Gemini/Claude) como <strong className="text-white bg-white/20 px-1.5 py-0.5 rounded">"Sparring Partner"</strong> estratégico para retar la lógica matemática y estructurar hallazgos.
-          </p>
           
-          <div className="bg-[#09152C]/60 rounded-xl p-5 border border-white/5 mt-auto mb-4">
-            <h4 className="text-white font-black text-sm mb-4 flex items-center gap-2"><CheckCircle size={16} className="text-sura-yellow"/> Decisiones propias</h4>
-            <ul className="text-white/80 text-xs leading-relaxed space-y-4">
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Arquitectura escalable Power Platform + UiPath.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Detección causa raíz de inconsistencias.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Lógicas y reglas para derivación HITL inteligente.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Criterio de oro: NO automatizar sin rediseñar.</li>
+          <div className="bg-[#09152C]/60 rounded-[1.5rem] p-6 border border-white/10 mb-6 shadow-lg">
+            <h4 className="text-white font-black text-[15px] mb-5 flex items-center gap-2"><CheckCircle size={18} className="text-sura-yellow"/> Decisiones propias e Intelectuales</h4>
+            <ul className="text-white/80 text-[13px] leading-relaxed space-y-5">
+               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Arquitectura escalable en <strong>Power Platform + UiPath</strong> desde cero.</span></li>
+               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Detección de la causa raíz en la <strong>inconsistencia operativa</strong> de datos.</span></li>
+               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Creación de lógicas de negocio para derivación inteligente a <strong>HITL</strong>.</span></li>
+               <li className="flex items-start gap-3"><span className="text-sura-yellow font-black text-[10px] mt-1.5">◆</span> <span>Criterio de oro: <strong>NO automatizar</strong> un proceso roto sin rediseñar el AS-IS.</span></li>
             </ul>
           </div>
           
-          <div className="flex items-start gap-2 text-blue-200/80 bg-white/5 p-3 rounded-xl border border-white/5">
-             <Info size={14} className="shrink-0 mt-0.5" />
-             <span className="text-[10px] font-medium leading-tight">La IA fue un acelerador.<br/>Definiciones y lógica de negocio 100% de criterio propio.</span>
+          <div className="flex items-start gap-3 text-blue-200/90 bg-white/5 p-4 rounded-xl border border-white/10 mt-auto">
+             <Info size={16} className="shrink-0 mt-0.5 text-sura-cyan" />
+             <span className="text-[11px] font-medium leading-relaxed">La Inteligencia Artificial fungió estrictamente como un acelerador y estructurador.<br/>Las definiciones de arquitectura y lógica de negocio son <strong>100% de criterio propio.</strong></span>
           </div>
         </div>
       </div>
