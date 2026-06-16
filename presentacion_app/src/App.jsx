@@ -301,17 +301,17 @@ const Slide3ToBe = () => (
 
 const Slide4Gov = () => (
   <div className="flex-1 flex flex-col px-12 lg:px-20 pb-32 pt-4 bg-slate-50 text-sura-dark h-full slide-content overflow-y-auto">
-    <div className="mb-8">
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-8">
       <span className="text-sura-aqua text-sm font-black tracking-widest uppercase flex items-center gap-3 mb-3"><div className="w-8 h-[3px] bg-sura-aqua"></div> Gobernanza y Control</span>
       <h2 className="text-[2.75rem] leading-tight font-black text-sura-blue-vivo">Políticas, Riesgos y KPIs</h2>
       <p className="text-sura-dark/70 text-xl mt-4 max-w-4xl font-medium">Arquitectura de control: asegurando que la automatización genere el valor proyectado sin exponer a la compañía.</p>
-    </div>
+    </motion.div>
 
     {/* Custom Bento Grid Implementation */}
     <div className="flex flex-col gap-6 flex-1 h-full pb-4">
       
       {/* Top Row: KPIs as Bento Grid themselves */}
-      <div className="w-full flex flex-col gap-4">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="w-full flex flex-col gap-4">
          <h3 className="text-xl font-black flex items-center gap-3 text-sura-blue ml-2"><Activity className="text-sura-green" size={24} strokeWidth={3}/> Tablero de Resultados</h3>
          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
             {[
@@ -340,7 +340,7 @@ const Slide4Gov = () => (
       </div>
 
       {/* Bottom Row: Reglas & Riesgos */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full flex-1">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full flex-1">
         <div className="bg-white border border-slate-200 rounded-[2rem] p-8 shadow-xl shadow-slate-200/50 flex flex-col group overflow-hidden relative">
           <div className="flex items-center justify-between mb-6 z-10">
             <h3 className="text-2xl font-black flex items-center gap-4 text-sura-blue"><ShieldCheck className="text-sura-aqua" size={32} strokeWidth={2.5}/> Reglas de Negocio</h3>
@@ -387,7 +387,7 @@ const Slide4Gov = () => (
             <AlertTriangle size={250} />
           </div>
         </div>
-      </div>
+      </motion.div>
 
     </div>
   </div>
@@ -395,16 +395,16 @@ const Slide4Gov = () => (
 
 const Slide5Tech = () => (
   <div className="flex-1 flex flex-col px-12 lg:px-20 pb-32 pt-4 bg-slate-50 text-sura-dark h-full overflow-hidden slide-content">
-    <div className="mb-8 shrink-0">
+    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="mb-8 shrink-0">
       <span className="text-sura-blue-vivo text-xs font-black tracking-widest uppercase flex items-center gap-3 mb-2"><div className="w-8 h-[2px] bg-sura-blue-vivo"></div> Stack y Criterio de Datos</span>
       <h2 className="text-4xl leading-tight font-black text-sura-blue-vivo">Stack, Análisis de Volumen y Uso de IA</h2>
       <p className="text-sura-dark/70 text-base mt-2 max-w-4xl font-medium">Arquitectura Microsoft Power Platform + UiPath, análisis de volumen y declaración de uso de IA.</p>
-    </div>
+    </motion.div>
 
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 flex-1 min-h-0">
       
       {/* LEFT COLUMN: Stack (span 3/12) */}
-      <div className="col-span-3 bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative overflow-hidden">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="col-span-3 bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative overflow-hidden">
         <h3 className="text-base font-black text-sura-blue mb-6 flex items-center gap-2"><Layers size={20} className="text-sura-blue-vivo" /> Stack Propuesto</h3>
         
         <div className="flex flex-col flex-1 justify-between min-h-0">
@@ -458,7 +458,7 @@ const Slide5Tech = () => (
       </div>
 
       {/* CENTER COLUMN: Volumen + STP/HITL (span 6/12) */}
-      <div className="col-span-6 flex flex-col gap-5 min-h-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="col-span-6 flex flex-col gap-5 min-h-0">
         
         {/* Volumen Card */}
         <div className="bg-white border border-slate-200 rounded-[2rem] p-6 shadow-lg flex flex-col relative justify-center">
@@ -553,7 +553,7 @@ const Slide5Tech = () => (
       </div>
 
       {/* RIGHT COLUMN: IA (span 3/12) */}
-      <div className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden">
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="col-span-3 bg-gradient-to-br from-sura-blue to-[#0A1A3A] border border-sura-blue/50 rounded-[2rem] p-6 shadow-xl flex flex-col relative overflow-hidden">
         <div className="z-10 relative flex-1 flex flex-col justify-between">
           <div>
             <h3 className="text-[20px] font-black text-white mb-5 leading-tight flex items-center gap-3">
@@ -582,7 +582,7 @@ const Slide5Tech = () => (
              <span className="text-[10px] font-medium leading-relaxed">La Inteligencia Artificial fungió como un acelerador. Las definiciones y lógica son <strong>100% de criterio propio.</strong></span>
           </div>
         </div>
-      </div>
+      </motion.div>
 
     </div>
   </div>
