@@ -415,7 +415,7 @@ const Slide5Tech = () => (
               <Layers className="text-purple-600 shrink-0" size={26} />
               <div>
                 <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power Apps / Forms</h4>
-                <p className="text-[10px] text-slate-500 font-medium">Validación en origen.</p>
+                <p className="text-[10px] text-slate-500 font-medium leading-tight">Captura y validación en origen con reglas en tiempo real.</p>
               </div>
             </div>
           </div>
@@ -426,7 +426,7 @@ const Slide5Tech = () => (
               <Workflow className="text-blue-500 shrink-0" size={26} />
               <div>
                 <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power Automate</h4>
-                <p className="text-[10px] text-slate-500 font-medium">Orquestación ETL.</p>
+                <p className="text-[10px] text-slate-500 font-medium leading-tight">Orquestador de lógica, enrutamiento y control (ETL).</p>
               </div>
             </div>
           </div>
@@ -439,7 +439,7 @@ const Slide5Tech = () => (
               </div>
               <div>
                 <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">UiPath (RPA)</h4>
-                <p className="text-[10px] text-slate-500 font-medium">Interacción legacy.</p>
+                <p className="text-[10px] text-slate-500 font-medium leading-tight">Interacción automatizada con sistemas core (legacy).</p>
               </div>
             </div>
           </div>
@@ -450,7 +450,7 @@ const Slide5Tech = () => (
               <BarChart2 className="text-yellow-500 shrink-0" size={26} />
               <div>
                 <h4 className="font-extrabold text-sura-blue text-[13px] leading-tight mb-0.5">Power BI / Dataverse</h4>
-                <p className="text-[10px] text-slate-500 font-medium">Volúmenes y tiempos.</p>
+                <p className="text-[10px] text-slate-500 font-medium leading-tight">Medición de volumetría, cuellos de botella y adopción.</p>
               </div>
             </div>
           </div>
@@ -478,18 +478,15 @@ const Slide5Tech = () => (
              </div>
           </div>
           
-          {/* Progress Bars */}
-          <div className="flex items-center gap-3">
-             <div className="flex-[0.95]">
-               <span className="text-[11px] font-black text-sura-blue mb-1 block">A: 95%</span>
-               <div className="w-full bg-sura-blue rounded-full h-2"></div>
+          {/* Progress Bars (Reverted to AS-IS / TO-BE) */}
+          <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+             <div className="flex-1">
+               <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-bold">AS-IS</span><span className="text-[10px] font-black text-sura-blue">45.2h</span></div>
+               <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-blue h-full" style={{width: '90%'}}></div></div>
              </div>
-             <div className="flex-[0.1] flex items-center gap-2">
-               <div className="flex-1">
-                 <span className="text-[11px] font-black text-teal-500 mb-1 block">B: 5%</span>
-                 <div className="w-full bg-teal-400 rounded-full h-2"></div>
-               </div>
-               <span className="text-[11px] font-black text-teal-500 mt-4">+0.5%</span>
+             <div className="flex-1">
+               <div className="flex justify-between items-center mb-1"><span className="text-[10px] font-bold">TO-BE</span><span className="text-[10px] font-black text-sura-cyan">~7.0h</span></div>
+               <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-cyan h-full" style={{width: '14%'}}></div></div>
              </div>
           </div>
         </div>
@@ -497,10 +494,10 @@ const Slide5Tech = () => (
         {/* STP & HITL Row */}
         <div className="grid grid-cols-2 gap-5 flex-1 min-h-0">
            {/* STP */}
-           <div className="bg-[#f0fdf4] border border-[#bbf7d0] rounded-[2rem] p-5 shadow-sm flex flex-col justify-between">
+           <div className="bg-white border border-sura-cyan/30 rounded-[2rem] p-5 shadow-md flex flex-col justify-between">
              <div>
-               <h4 className="text-[13px] font-black text-sura-green mb-4 flex items-center gap-2">
-                 <Zap className="text-white bg-sura-green p-1 rounded-md" size={24} /> 
+               <h4 className="text-[13px] font-black text-sura-cyan mb-4 flex items-center gap-2">
+                 <Zap className="text-white bg-sura-cyan p-1 rounded-md" size={24} /> 
                  Procesamiento Directo (STP)
                </h4>
                <div className="grid grid-cols-2 gap-2 mb-4">
@@ -510,37 +507,37 @@ const Slide5Tech = () => (
                    { name: 'Actualizar', icon: RefreshCw },
                    { name: 'Notificar', icon: Bell }
                  ].map(tag => (
-                   <div key={tag.name} className="bg-white px-2 py-3 rounded-xl border border-sura-green/20 shadow-sm flex items-center gap-2">
-                     <tag.icon size={14} className="text-sura-green shrink-0"/>
-                     <span className="text-[10px] font-bold text-sura-green leading-tight">{tag.name}</span>
+                   <div key={tag.name} className="bg-sura-cyan/5 px-2 py-3 rounded-xl border border-sura-cyan/20 flex items-center gap-2">
+                     <tag.icon size={14} className="text-sura-cyan shrink-0"/>
+                     <span className="text-[10px] font-bold text-sura-cyan leading-tight">{tag.name}</span>
                    </div>
                  ))}
                </div>
              </div>
-             <div className="flex items-start gap-2 text-sura-green/80 mt-auto">
+             <div className="flex items-start gap-2 text-sura-cyan/80 mt-auto">
                <Info size={14} className="shrink-0 mt-0.5" />
                <span className="text-[10px] font-semibold leading-tight">Flujos automáticos sin intervención manual.</span>
              </div>
            </div>
 
            {/* HITL */}
-           <div className="bg-slate-900 border border-slate-800 rounded-[2rem] p-5 shadow-lg flex flex-col justify-between">
+           <div className="bg-sura-blue border border-sura-dark rounded-[2rem] p-5 shadow-lg flex flex-col justify-between relative overflow-hidden">
              <div>
-               <h4 className="text-[13px] font-black text-white mb-4 flex items-center gap-2">
-                 <User className="text-white bg-sura-cyan p-1 rounded-md" size={24} /> 
+               <h4 className="text-[13px] font-black text-white mb-4 flex items-center gap-2 relative z-10">
+                 <User className="text-sura-blue bg-white p-1 rounded-md" size={24} /> 
                  Intervención Humana (HITL)
                </h4>
-               <div className="grid grid-cols-2 gap-2 mb-4">
+               <div className="grid grid-cols-2 gap-2 mb-4 relative z-10">
                  {['Monitoreo', 'No Encontrado', 'Inconsistencias', 'Creación RD'].map(tag => (
-                   <div key={tag} className="bg-[#1e293b] px-2 py-3 rounded-xl border border-sura-cyan/20 flex items-center justify-center text-center">
-                     <span className="text-[10px] font-medium text-blue-200 leading-tight">{tag}</span>
+                   <div key={tag} className="bg-sura-dark/40 px-2 py-3 rounded-xl border border-white/10 flex items-center justify-center text-center">
+                     <span className="text-[10px] font-medium text-white leading-tight">{tag}</span>
                    </div>
                  ))}
                </div>
              </div>
-             <div className="flex items-start gap-2 text-blue-200/60 mt-auto">
+             <div className="flex items-start gap-2 text-sura-cyan mt-auto relative z-10">
                <Info size={14} className="shrink-0 mt-0.5" />
-               <span className="text-[10px] font-medium leading-tight">Manejo de excepciones y validaciones críticas.</span>
+               <span className="text-[10px] font-medium leading-tight text-white/80">Manejo de excepciones y validaciones críticas.</span>
              </div>
            </div>
         </div>
@@ -553,24 +550,24 @@ const Slide5Tech = () => (
           <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center mb-5 shadow-inner backdrop-blur-sm border border-white/10">
             <Bot className="text-sura-yellow" size={24}/>
           </div>
-          <h3 className="text-lg font-black text-white mb-4">Declaración IA</h3>
+          <h3 className="text-lg font-black text-white mb-3">Declaración IA</h3>
           <p className="text-white/90 text-xs leading-relaxed font-medium mb-6">
-            Uso de IA (Gemini/Claude) como <strong className="text-white bg-white/20 px-1.5 py-0.5 rounded">"Sparring Partner"</strong> para estructurar y retar volumetría.
+            Uso de modelos avanzados (Gemini/Claude) como <strong className="text-white bg-white/20 px-1.5 py-0.5 rounded">"Sparring Partner"</strong> estratégico para retar la lógica matemática y estructurar hallazgos.
           </p>
           
           <div className="bg-[#09152C]/60 rounded-xl p-5 border border-white/5 mt-auto mb-4">
             <h4 className="text-white font-black text-sm mb-4 flex items-center gap-2"><CheckCircle size={16} className="text-sura-yellow"/> Decisiones propias</h4>
             <ul className="text-white/80 text-xs leading-relaxed space-y-4">
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Arquitectura Power Platform + UiPath.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Detección inconsistencias.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Priorización HITL para nombres.</li>
-               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Criterio RD automatizar sin rediseñar.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Arquitectura escalable Power Platform + UiPath.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Detección causa raíz de inconsistencias.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Lógicas y reglas para derivación HITL inteligente.</li>
+               <li className="flex items-start gap-2"><span className="text-sura-yellow font-black text-[8px] mt-1.5">◆</span> Criterio de oro: NO automatizar sin rediseñar.</li>
             </ul>
           </div>
           
           <div className="flex items-start gap-2 text-blue-200/80 bg-white/5 p-3 rounded-xl border border-white/5">
              <Info size={14} className="shrink-0 mt-0.5" />
-             <span className="text-[10px] font-medium leading-tight">La IA fue facilitador.<br/>Decisiones de criterio propio.</span>
+             <span className="text-[10px] font-medium leading-tight">La IA fue un acelerador.<br/>Definiciones y lógica de negocio 100% de criterio propio.</span>
           </div>
         </div>
       </div>
