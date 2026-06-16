@@ -478,19 +478,16 @@ const Slide5Tech = () => (
              </div>
           </div>
           
-          <div className="relative pt-2">
-            <div className="flex justify-between text-[10px] font-black text-sura-blue mb-2">
-              <span className="text-sura-blue/80">AS-IS</span>
-              <span className="text-sura-blue">45.2h</span>
-              <span>TO-BE</span>
-              <span className="text-sura-cyan">~7.0h</span>
-            </div>
-            
-            <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden flex">
-              <div className="h-full bg-sura-blue w-full relative">
-                <div className="absolute right-0 top-0 h-full bg-sura-cyan" style={{ width: '15%' }}></div>
-              </div>
-            </div>
+          {/* Progress Bars (Reverted to AS-IS / TO-BE) */}
+          <div className="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+             <div className="flex-1">
+               <div className="flex justify-between items-center mb-1"><span className="text-[11px] font-bold">AS-IS</span><span className="text-[11px] font-black text-sura-blue">45.2h</span></div>
+               <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-blue h-full" style={{width: '100%'}}></div></div>
+             </div>
+             <div className="flex-1">
+               <div className="flex justify-between items-center mb-1"><span className="text-[11px] font-bold">TO-BE</span><span className="text-[11px] font-black text-sura-cyan">~7.0h</span></div>
+               <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden"><div className="bg-sura-cyan h-full" style={{width: '15%'}}></div></div>
+             </div>
           </div>
         </div>
 
